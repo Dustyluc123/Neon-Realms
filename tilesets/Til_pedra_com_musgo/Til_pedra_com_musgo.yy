@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"Til_pedra_com_musgo",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"Til_pedra_com_musgo",
+  "out_columns":4,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"naturasa",
+    "path":"folders/Conjuntos de tiles/naturasa.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"Spr_pedra_com_musgo",
+    "path":"sprites/Spr_pedra_com_musgo/Spr_pedra_com_musgo.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":16,
+}

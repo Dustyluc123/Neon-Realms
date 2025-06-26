@@ -1,0 +1,11 @@
+# Arquivos temporários e de cache do GameMaker
+*.backup
+*.yyps
+/datafiles_yy/
+/temp_yy/
+/Configs/
+/options/main/inherited/
+/options/mac/inherited/
+/options/windows/inherited/
+/options/linux/inherited/
+/scripts/macros/

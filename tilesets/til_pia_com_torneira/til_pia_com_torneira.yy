@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"til_pia_com_torneira",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"til_pia_com_torneira",
+  "out_columns":16,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"coisas",
+    "path":"folders/Conjuntos de tiles/coisas.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"Spr_pia_com_torneira",
+    "path":"sprites/Spr_pia_com_torneira/Spr_pia_com_torneira.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":4,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":4,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":256,
+}

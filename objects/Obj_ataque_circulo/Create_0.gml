@@ -1,0 +1,2 @@
+mudar_Spr=false
+Time_ataque=90

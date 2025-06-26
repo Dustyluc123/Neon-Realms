@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"til_foto_casal_separado",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"til_foto_casal_separado",
+  "out_columns":4,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"coisas",
+    "path":"folders/Conjuntos de tiles/coisas.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"Spr_foto_casas_separado",
+    "path":"sprites/Spr_foto_casas_separado/Spr_foto_casas_separado.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":8,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":8,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":16,
+}

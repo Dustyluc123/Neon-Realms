@@ -1,0 +1,1 @@
+estado = Scr_personagem_andando;

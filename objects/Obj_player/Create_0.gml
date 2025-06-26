@@ -1,0 +1,36 @@
+direita=-1
+esquerda=-1
+baixo=-1
+cima=-1
+v=0
+
+hveloc = 0;
+vveloc = 0;
+
+veloc = 3;
+
+my_weapon = instance_create_layer(x,y,"Weapons",Obj_armas)
+my_weapon.weapon_id=self;
+
+dir = 0
+
+estado = Scr_personagem_andando
+
+estado_debuff ="normal"
+
+//dash
+
+dash_dir = -1
+dash_veloc = 8
+
+global.life = 10
+
+imune = false
+
+tempo = 20
+
+color = c_purple
+
+hit_alpha = 0
+
+hit_color = c_white
