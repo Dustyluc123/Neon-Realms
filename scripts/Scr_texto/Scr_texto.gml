@@ -23,6 +23,27 @@ function Scr_texto(){
 	  break;
 	  
   }
+     switch npc_nome{
+	  
+	  case "Espelho":
+	  ds_grid_add_text("Por algum motivo eu não consigo me ver nessas coisas, parece preguiça do criador eu não me ver nisso. Talvez eu seja um vampiro",Spr_retrado,0,"Yuki")
+	  break;
+	  
+  }
+   switch npc_nome{
+	  
+	  case "Cama":
+	  ds_grid_add_text("Minha cama, o lugar onde encontro descanso e paz. Mas estou tendo pesadelos recorrentes com fogo . . . muito fogo.",Spr_retrado,0,"Yuki")
+	  break;
+	  
+   }
+   switch npc_nome{
+	  
+	  case "Poster":
+	  ds_grid_add_text("Barvel vs Pc A luta sobre heróis e computadores malignos.",Spr_retrado,0,"Yuki")
+	  break;
+	  
+  }
 }
 function ds_grid_add_row(){
 	///@arg ds_grid

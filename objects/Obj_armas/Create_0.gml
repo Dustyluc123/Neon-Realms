@@ -37,9 +37,9 @@ armas[3] = ds_map_create()
 
 ds_map_add(armas[3],"sprite",Spr_tolpshon);
 ds_map_add(armas[3],"proj",Spr_proj3);
-ds_map_add(armas[3],"proj_spd",5);
+ds_map_add(armas[3],"proj_spd",3);
 ds_map_add(armas[3],"proj_damage",200);
-ds_map_add(armas[3],"proj_delay",20);
+ds_map_add(armas[3],"proj_delay",10);
 ds_map_add(armas[3],"automatic",true);
 ds_map_add(armas[3],"drop",Obj_tolpshon);
 

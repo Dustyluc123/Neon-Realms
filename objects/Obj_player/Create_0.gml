@@ -34,3 +34,11 @@ color = c_purple
 hit_alpha = 0
 
 hit_color = c_white
+
+// No final do evento Create de Obj_player
+
+// Cria uma instância do nosso objeto de sombra
+var minha_sombra = instance_create_layer(x, y, "Instances", Obj_sombra);
+
+// Avisa para a instância da sombra recém-criada que "eu" (o jogador) sou o dono dela.
+minha_sombra.dono = id;

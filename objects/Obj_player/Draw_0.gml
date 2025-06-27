@@ -1,5 +1,5 @@
 
-draw_sprite(Spr_sombra, 0, x, y +sprite_height/2)
+
 draw_self()
 
 

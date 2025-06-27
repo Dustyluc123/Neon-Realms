@@ -65,7 +65,7 @@ function Scr_lilith_ataque_2(){
 }
 
 function Scr_lilith_ataque_3(){
-	repeat(1){
+	repeat(2){
 
 		var _xx = irandom_range(x - 100,x + 100);
 		var _yy = irandom_range(y - 100,y + 100);

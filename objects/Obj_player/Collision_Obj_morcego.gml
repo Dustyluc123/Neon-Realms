@@ -10,7 +10,7 @@ if (controle_imune = true){
 if (imune = false ){	
 
 hit_alpha = 1
-global.life -=3
+global.life -=1
 
 controle_imune = false;
 

@@ -16,7 +16,7 @@ script_execute(estado)
    hit_alpha = 0
  }
 
-hit_alpha = lerp(hit_alpha,0,0.1);
+hit_alpha = lerp(hit_alpha,0,0.3);
 
 
 tempo = max(tempo - 1, 0)
