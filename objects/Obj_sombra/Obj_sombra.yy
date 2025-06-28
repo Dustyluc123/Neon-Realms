@@ -10,8 +10,8 @@
   "name":"Obj_sombra",
   "overriddenProperties":[],
   "parent":{
-    "name":"personagem",
-    "path":"folders/Objetos/personagem.yy",
+    "name":"Yuki",
+    "path":"folders/Objetos/Yuki.yy",
   },
   "parentObjectId":null,
   "persistent":false,

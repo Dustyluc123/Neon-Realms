@@ -8,8 +8,8 @@
   "name":"Obj_Espelho",
   "overriddenProperties":[],
   "parent":{
-    "name":"npc",
-    "path":"folders/Objetos/mapa/npc.yy",
+    "name":"Objetos_do_cenario",
+    "path":"folders/Objetos/Dialogo/Dialogos_criados/Objetos_do_cenario.yy",
   },
   "parentObjectId":{
     "name":"Obj_ncp_parent",

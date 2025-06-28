@@ -6,8 +6,8 @@
   "name":"Obj_ncp_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"dialogo",
-    "path":"folders/Objetos/dialogo.yy",
+    "name":"Para_funcionar",
+    "path":"folders/Objetos/Dialogo/Para_funcionar.yy",
   },
   "parentObjectId":null,
   "persistent":false,

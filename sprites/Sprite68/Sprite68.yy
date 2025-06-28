@@ -28,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"lilith",
-    "path":"folders/Sprites/inimigo/lilith.yy",
+    "path":"folders/Sprites/Inimigos/lilith.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

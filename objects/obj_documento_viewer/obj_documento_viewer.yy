@@ -11,8 +11,8 @@
   "name":"obj_documento_viewer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Documentos",
-    "path":"folders/Objetos/Documentos.yy",
+    "name":"Para_fucionar",
+    "path":"folders/Objetos/Documentos/Para_fucionar.yy",
   },
   "parentObjectId":null,
   "persistent":false,

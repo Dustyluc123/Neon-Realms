@@ -8,8 +8,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Obj_weapon_drop","path":"objects/Obj_weapon_drop/Obj_weapon_drop.yy",},"propertyId":{"name":"weapon_index","path":"objects/Obj_weapon_drop/Obj_weapon_drop.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
   ],
   "parent":{
-    "name":"arma",
-    "path":"folders/Objetos/arma.yy",
+    "name":"Armas_criadas",
+    "path":"folders/Objetos/Armas/Armas_criadas.yy",
   },
   "parentObjectId":{
     "name":"Obj_weapon_drop",

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"criar_a_luz_no_mapa",
-    "path":"folders/Objetos/iluminacao/criar_a_luz_no_mapa.yy",
+    "path":"folders/Objetos/Iluminacao/criar_a_luz_no_mapa.yy",
   },
   "parentObjectId":null,
   "persistent":false,

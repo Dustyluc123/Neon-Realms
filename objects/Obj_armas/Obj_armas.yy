@@ -11,8 +11,8 @@
   "name":"Obj_armas",
   "overriddenProperties":[],
   "parent":{
-    "name":"arma",
-    "path":"folders/Objetos/arma.yy",
+    "name":"Para_fucionar",
+    "path":"folders/Objetos/Armas/Para_fucionar.yy",
   },
   "parentObjectId":null,
   "persistent":true,

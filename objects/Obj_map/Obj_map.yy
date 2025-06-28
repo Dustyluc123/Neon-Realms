@@ -10,8 +10,8 @@
   "name":"Obj_map",
   "overriddenProperties":[],
   "parent":{
-    "name":"mapa",
-    "path":"folders/Objetos/mapa.yy",
+    "name":"Mapa",
+    "path":"folders/Objetos/Mapa.yy",
   },
   "parentObjectId":null,
   "persistent":false,

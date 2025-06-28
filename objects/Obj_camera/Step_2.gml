@@ -1,31 +1,33 @@
-// --- Coloque este código no evento END STEP do seu obj_camera ---
+// --- NOVO CÓDIGO COMPLETO para o evento END STEP de obj_camera ---
 
-// 1. Verifique se o alvo (o jogador) existe na sala
-// Se não existir, o código para aqui para evitar erros.
+// 1. Encontrar o alvo (o jogador)
 if (!instance_exists(Obj_player)) exit;
 
-
-// 2. Pegue as informações da câmera que está ativa na view 0
+// 2. Pegar as dimensões da câmera/view
 var _view_cam = view_camera[0];
 var _view_w = camera_get_view_width(_view_cam);
 var _view_h = camera_get_view_height(_view_cam);
 
-
-// 3. Calcule a posição final que a câmera deve alcançar
-// O alvo é a posição do jogador MENOS metade da largura/altura da tela
+// 3. Calcular a posição alvo (centralizada no jogador)
 var _target_x = Obj_player.x - _view_w / 2;
 var _target_y = Obj_player.y - _view_h / 2;
 
-
-// 4. Use lerp para mover suavemente a posição do obj_camera até o alvo
-// As variáveis "x" e "y" pertencem ao próprio obj_camera
-// O valor 0.05 é a "velocidade". Aumente para uma câmera mais rápida, diminua para uma mais lenta.
-// Tente este valor para uma câmera mais rápida
+// 4. Suavizar o movimento da câmera até o alvo com lerp
+// (Use o valor de velocidade que você preferir aqui, ex: 0.1)
 x = lerp(x, _target_x, 0.1);
 y = lerp(y, _target_y, 0.1);
 
+// ------------------- NOVA PARTE ADICIONADA -------------------
+// 5. LIMITAR A CÂMERA DENTRO DOS LIMITES DA SALA
+// A função clamp(valor, minimo, maximo) garante que o valor nunca saia dos limites.
 
-// 5. Atualize a câmera real com a nova posição
-// Usamos floor() para arredondar o número. Isso evita que sprites em pixel art "tremam".
-// É um polimento final que deixa o visual muito melhor.
+// Limita a posição X da câmera
+x = clamp(x, 0, room_width - _view_w);
+
+// Limita a posição Y da câmera
+y = clamp(y, 0, room_height - _view_h);
+// ----------------- FIM DA NOVA PARTE ADICIONADA -----------------
+
+// 6. Aplicar a posição FINAL e LIMITADA na câmera real
+// (Arredondamos com floor() para evitar tremor de pixels)
 camera_set_view_pos(_view_cam, floor(x), floor(y));

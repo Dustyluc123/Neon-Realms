@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":3,
   "parent":{
-    "name":"arma",
-    "path":"folders/Sprites/arma.yy",
+    "name":"Projetio",
+    "path":"folders/Sprites/Armas/Projetio.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,8 +1,8 @@
-// Guarda qual sprite de documento ele deve mostrar
-sprite_para_mostrar = noone;
+// --- NOVO CÓDIGO para o evento CREATE de obj_documento_viewer ---
 
-// Pausa o jogo. Isso impede o jogador de se mover enquanto lê.
-// É uma boa prática desativar objetos para economizar processamento.
-instance_deactivate_object(Obj_player); 
-// Desative outros objetos se necessário (inimigos, etc.)
-// instance_deactivate_object(Obj_inimigo_parente);
+sprite_para_mostrar = noone;
+botao_fechar_clicado = false;
+
+// Pausa TUDO no jogo, MENOS esta instância do visualizador.
+// O "true" diz para não desativar a instância que está executando este código.
+instance_deactivate_all(true);

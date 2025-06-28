@@ -8,8 +8,8 @@
   "name":"Obj_ir_casa",
   "overriddenProperties":[],
   "parent":{
-    "name":"troca_de_room",
-    "path":"folders/Objetos/troca_de_room.yy",
+    "name":"Vila",
+    "path":"folders/Objetos/Mapa/Vila.yy",
   },
   "parentObjectId":null,
   "persistent":false,

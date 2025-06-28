@@ -8,8 +8,8 @@
   "name":"Obj_npc_elisa",
   "overriddenProperties":[],
   "parent":{
-    "name":"npc",
-    "path":"folders/Objetos/mapa/npc.yy",
+    "name":"NPC",
+    "path":"folders/Objetos/Dialogo/Dialogos_criados/NPC.yy",
   },
   "parentObjectId":{
     "name":"Obj_ncp_parent",

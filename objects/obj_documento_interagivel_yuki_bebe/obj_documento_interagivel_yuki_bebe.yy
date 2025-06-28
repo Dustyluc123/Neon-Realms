@@ -9,8 +9,8 @@
   "name":"obj_documento_interagivel_yuki_bebe",
   "overriddenProperties":[],
   "parent":{
-    "name":"Documentos",
-    "path":"folders/Objetos/Documentos.yy",
+    "name":"Documentos_criados",
+    "path":"folders/Objetos/Documentos/Documentos_criados.yy",
   },
   "parentObjectId":null,
   "persistent":false,

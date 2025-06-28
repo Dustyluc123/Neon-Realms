@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"luz_ligth_render",
-    "path":"folders/Objetos/iluminacao/luz_ligth_render.yy",
+    "path":"folders/Objetos/Iluminacao/luz_ligth_render.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Lilith",
-    "path":"folders/Objetos/mapa/Lilith.yy",
+    "path":"folders/Objetos/Inimigos/Lilith.yy",
   },
   "parentObjectId":null,
   "persistent":false,
