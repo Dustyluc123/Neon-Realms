@@ -41,11 +41,7 @@ cima = keyboard_check(ord("W"))
 esquerda = keyboard_check(ord("A"))
 baixo = keyboard_check(ord("S"))
 }
-hveloc = (direita - esquerda) * veloc
- vveloc = (baixo - cima) * veloc
 
-
-Scr_personagem_colisao()
 
 //Mudar as sprites
 
@@ -136,8 +132,6 @@ Scr_personagem_colisao()
 	var _inst = instance_create_layer(x, y, "instances", Obj_dash)
 	_inst.sprite_index = sprite_index
 }
-
-
 
 
 
