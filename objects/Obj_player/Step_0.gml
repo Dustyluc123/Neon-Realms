@@ -66,7 +66,7 @@ else
                 }
                 // Se TEM a chave, destrói tudo
                 else {
-                    with (Obj_porta_tyler) { image_speed = 1; }
+                    with (Obj_porta_tyler) { animando = true; }
                     with (Obj_quarto_escuro) { instance_destroy(); }
                     with (Obj_colisao_porta_tyler) { instance_destroy(); }
                 }
