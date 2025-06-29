@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"parede",
-    "path":"folders/Sprites/mapa/parede.yy",
+    "path":"folders/Sprites/mapa/coisas\r\ncoisas/parede.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

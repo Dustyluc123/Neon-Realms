@@ -24,67 +24,48 @@ tempo = max(tempo - 1, 0)
 
 
 if distance_to_object(Obj_ncp_parent)<= 10{
-// --- CÓDIGO DE INTERAÇÃO FINAL para o Evento Step do Obj_player ---
+// --- CÓDIGO DE INTERAÇÃO FINAL E INTELIGENTE para o Evento Step do Obj_player ---
+
+var _distancia_interacao = 32;
+// --- CÓDIGO FINAL DE INTERAÇÃO para o Evento Step do Obj_player ---
 
 var _distancia_interacao = 32;
 
-// --- Interação com a Chave para Apanhá-la ---
-var _chave_perto = instance_nearest(x, y, Obj_chave_tyler);
-if (_chave_perto != noone && distance_to_object(_chave_perto) < _distancia_interacao)
+if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo))
 {
-    if (keyboard_check_pressed(ord("E")))
+    var _alvo_chave = instance_nearest(x, y, Obj_Chave);
+    if (_alvo_chave != noone && distance_to_object(_alvo_chave) < _distancia_interacao)
     {
-        // 1. "Apanha" a chave
-        global.tem_chave_tyler = true;
+        // Adiciona a chave específica ao nosso inventário
+        array_push(global.inventario_chaves, _alvo_chave.nome_da_chave);
         
-        // 2. Destrói o objeto da chave que está no chão
-        with (_chave_perto) {
-            instance_destroy();
-        }
+        // Inicia o diálogo específico desta chave
+        IniciarDialogo(_alvo_chave.dialogo_ao_apanhar); // Usa a função global
         
-        // 3. Opcional: Mostra um diálogo de confirmação. Isso exigiria uma nova
-        // entrada no seu Scr_texto com o case "Sistema", por exemplo.
-        // var _dialogo = instance_create_layer(x, y, "dialogo", Obj_dialogo);
-        // _dialogo.npc_nome = "Sistema"; 
+        // Destrói o objeto da chave
+        instance_destroy(_alvo_chave);
     }
-}
-// --- Interação com NPCs e a Porta ---
-else 
-{
-    var _npc_perto = instance_nearest(x, y, Obj_ncp_parent);
-    if (_npc_perto != noone && distance_to_object(_npc_perto) < _distancia_interacao)
+    else
     {
-        if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo)) 
+        var _alvo_porta = instance_nearest(x, y, Obj_Porta_Trancavel);
+        if (_alvo_porta != noone && distance_to_object(_alvo_porta) < _distancia_interacao)
         {
-            // É a porta do Tyler?
-            if (_npc_perto.object_index == Obj_porta_tyler)
-            {
-                // Se NÃO tem a chave, mostre o diálogo "Porta"
-                if (global.tem_chave_tyler == false) {
-                    var _dialogo = instance_create_layer(x, y, "dialogo", Obj_dialogo);
-                    _dialogo.npc_nome = _npc_perto.nome; // Vai usar o nome "Porta"
-                }
-                // Se TEM a chave, destrói tudo
-                else {
-                    with (Obj_porta_tyler) { animando = true; }
-                    with (Obj_quarto_escuro) { instance_destroy(); }
-                    with (Obj_colisao_porta_tyler) { instance_destroy(); }
+            if (_alvo_porta.trancada == true) {
+                var _tem_a_chave = array_contains(global.inventario_chaves, _alvo_porta.chave_necessaria);
+                if (_tem_a_chave) {
+                    with (_alvo_porta) { animando = true; }
+                    // ... destruir colisão e escuridão ...
+                } else {
+                    IniciarDialogo(_alvo_porta.dialogo_trancado);
                 }
             }
-            // É o pai?
-            else if (_npc_perto.object_index == Obj_nap_pai_respirando)
+        }
+        else
+        {
+            var _alvo_npc = instance_nearest(x, y, Obj_ncp_parent);
+            if (_alvo_npc != noone && distance_to_object(_alvo_npc) < _distancia_interacao)
             {
-                global.falou_com_pai = true;
-                // Inicia o diálogo normal do pai
-                var _dialogo = instance_create_layer(x, y, "dialogo", Obj_dialogo);
-                _dialogo.npc_nome = _npc_perto.nome;
-            }
-            // É outro NPC qualquer
-            else
-            {
-                 // Inicia o diálogo normal de outros NPCs
-                var _dialogo = instance_create_layer(x, y, "dialogo", Obj_dialogo);
-                _dialogo.npc_nome = _npc_perto.nome;
+                // Lógica de diálogo normal com NPCs
             }
         }
     }

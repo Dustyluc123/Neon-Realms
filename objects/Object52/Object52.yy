@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_colisao_porta_tyler",
+  "%Name":"Object52",
   "eventList":[],
   "managed":true,
-  "name":"Obj_colisao_porta_tyler",
+  "name":"Object52",
   "overriddenProperties":[],
   "parent":{
     "name":"Vila",

@@ -1,23 +1,17 @@
-// No evento Step de Obj_porta_tyler
+// --- CÓDIGO PARA O EVENTO STEP ---
 
-// Se a porta NÃO deve estar a animar, força-a a ficar no frame 0.
-// Este código anula qualquer outra tentativa de animar a porta.
-if (animando == false)
+// Se a porta recebeu a ordem para animar...
+if (animando == true)
 {
-    image_speed = 0;
-    image_index = 0;
-}
-else // Se a porta DEVE estar a animar...
-{
-    // ...toca a animação normalmente.
+    // ...toca a animação.
     image_speed = 1;
-    
-    // E verifica se a animação terminou.
-    // "image_number" contém o número total de frames da sprite.
+
+    // E verifica se a animação chegou ao fim.
     if (image_index >= image_number - 1)
     {
-        // Trava no último frame e para de animar permanentemente.
+        // Se chegou, trava no último frame e para de animar para sempre.
         image_index = image_number - 1;
         image_speed = 0;
+        animando = false; // Define como falso para não entrar aqui de novo
     }
 }

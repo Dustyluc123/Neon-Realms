@@ -1,40 +1,47 @@
-///OBJ_Dialogo
-if inicializar = true{
-var _guia = display_get_gui_height()
-var _guil = display_get_gui_width()
+// --- CÓDIGO CORRIGIDO para o Evento Draw de Obj_dialogo ---
 
-var _xx = 0
-var _yy = _guia - 200;
-var _c = c_grey
-var _sprites = texto_grid[# infos.Retrato,pagina]
-var _texto = string_copy(texto_grid[# infos.Texto,pagina], 0, carac)
-draw_set_font(fonte_pixe)
-draw_set_halign(fa_left);
-draw_set_valign(fa_left);
+if (inicializar == true) {
+    var _guia = display_get_gui_height();
+    var _guil = display_get_gui_width();
+    
+    // Calcula a posição Y da sua caixa de diálogo
+    var _caixa_altura = 200;
+    var _caixa_y = _guia - _caixa_altura;
+    
+    var _c = c_grey;
+    
+    // Lógica de segurança para o sprite (continua a mesma)
+    var _sprites = undefined;
+    if (ds_grid_height(texto_grid) > pagina) {
+        _sprites = texto_grid[# infos.Retrato, pagina];
+    }
+    
+    var _texto = string_copy(texto_grid[# infos.Texto, pagina], 0, carac);
+    draw_set_font(fonte_pixe);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
 
+    // --- LADO ESQUERDO ---
+    if (texto_grid[# infos.Lado, pagina] == 0) {
+        draw_rectangle_color(200, _caixa_y, _guil, _guia, _c, _c, _c, _c, false);
+        draw_text(216, _caixa_y - 32, texto_grid[# infos.Nome, pagina]);
+        draw_text_ext(232, _caixa_y + 32, _texto, 40, _guil - 264);
 
-///lado esquerdo
-if texto_grid [# infos.Lado,pagina] == 0{
-draw_rectangle_color(_xx + 200, _yy, _guil,_guia, _c, _c, _c, _c, false)
+        if (sprite_exists(_sprites)) {
+            // Posiciona o retrato relativo à caixa
+            draw_sprite_ext(_sprites, 0, 100, _caixa_y + (_caixa_altura / 2), 3, 3, 0, c_white, 1);
+        }
+    }
+    // --- LADO DIREITO ---
+    else { 
+        draw_rectangle_color(0, _caixa_y, _guil - 200, _guia, _c, _c, _c, _c, false);
+        var _stgw = string_width(texto_grid[# infos.Nome, pagina]);
+        draw_text(_guil - 216 - _stgw, _caixa_y - 32, texto_grid[# infos.Nome, pagina]);
+        draw_text_ext(32, _caixa_y + 32, _texto, 40, _guil - 264);
 
-draw_text(_xx + 216,_yy - 32,texto_grid[# infos.Nome, pagina])
-
-draw_text_ext(_xx + 232, _yy + 40,_texto,40, _guil - 264)
-
-draw_sprite_ext(_sprites,0,+3,_guia, 3, 3, 0, c_white, 1)
+        if (sprite_exists(_sprites)) {
+            // Posiciona o retrato relativo à caixa
+            draw_sprite_ext(_sprites, 0, _guil - 100, _caixa_y + (_caixa_altura / 2), -3, 3, 0, c_white, 1);
+        }
+    }
 }
-else{///lado direito
-
-draw_rectangle_color(_xx, _yy, _guil - 200,_guia, _c, _c, _c, _c, false)
-var _stgw = string_width(texto_grid[# infos.Nome, pagina])
-
-draw_text(_guil - 216 - _stgw,_yy - 32,texto_grid[# infos.Nome, pagina])
-
-draw_text_ext(_xx + 40, _yy + 40 ,_texto,32, _guil - 264)
-
-draw_sprite_ext(_sprites,0,-3,_guia,- 3, 3, 0, c_white, 1)
-
-}
-}
-
-

@@ -1,10 +1,14 @@
-// No evento Create de Obj_porta_tyler
+// --- CÓDIGO PARA O EVENTO CREATE ---
 
+// Configurações do Diálogo
 nome = "Porta";
+dialogo_trancado = "porta_tyler_trancada";
 
-// A porta começa parada
-image_index = 0;
-image_speed = 0;
+// Configurações da Fechadura
+chave_necessaria = "chave_do_quarto_do_tyler";
+trancada = true;
 
-// Nova variável de controlo
+// Configurações da Animação
 animando = false;
+image_speed = 0;
+image_index = 0;

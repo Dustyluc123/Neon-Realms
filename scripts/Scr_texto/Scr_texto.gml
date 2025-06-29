@@ -20,6 +20,12 @@ function Scr_texto(){
 	  ds_grid_add_text("Eae bsergfhom dia.",Spr_retrado2,1,"Car")
 	    ds_grid_add_text("O que asdgfngrdgfnhtemos para hoje?",Spr_retrado,0,"personagem 1")
 	  ds_grid_add_text("Treino desdfe tiro ao alvo",Spr_retrado2,1,"Car")
+
+	   case "sa":
+	  ds_grid_add_text("Boia",Spr_retrado,0,"personagem 1")
+	  ds_grid_add_text("Eae m dia.",Spr_retrado2,1,"Car")
+	    ds_grid_add_text("O que asdgfngrdgfnhtemos para hoje?",Spr_retrado,0,"personagem 1")
+	  ds_grid_add_text("Trero ao alvo",Spr_retrado2,1,"Car")
 	  break;
 	  
   }
@@ -44,14 +50,29 @@ function Scr_texto(){
 	  break;
 	  
   }
-  switch npc_nome{
-	  
-	  case "Porta":
-	  ds_grid_add_text("Está trancado . . .",Spr_retrado,0,"Yuki")
-	  ds_grid_add_text("Parece que preciso da chave do quarto do Tyler",Spr_retrado,0,"Yuki")
-	  break;
-	  
-  }
+  // Dentro do seu script Scr_texto
+
+// Dentro do seu script Scr_texto
+
+switch (npc_nome)
+{
+    // --- NOVO CÓDIGO ADICIONADO ---
+    case "Chave":
+        // Adiciona a fala e o retrato a serem usados ao apanhar a chave.
+        // O nome do "personagem" pode ser "Sistema" ou "Yuki" (para um pensamento).
+        ds_grid_add_text("Apanhei a chave do quarto do Tyler.", Spr_retrado, 0, "Yuki");
+        break; // Não se esqueça do break!
+    // --- FIM DO NOVO CÓDIGO ---
+
+    case "Porta":
+        ds_grid_add_text("Está trancado . . .", Spr_retrado, 0, "Yuki");
+        ds_grid_add_text("Parece que preciso da chave do quarto do Tyler", Spr_retrado, 0, "Yuki");
+        break;
+        
+    // (Seus outros cases de NPCs continuam aqui)
+}
+
+
 }
 function ds_grid_add_row(){
 	///@arg ds_grid
