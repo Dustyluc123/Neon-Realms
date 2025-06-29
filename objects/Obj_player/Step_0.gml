@@ -27,47 +27,63 @@ if distance_to_object(Obj_ncp_parent)<= 10{
 // --- CÓDIGO DE INTERAÇÃO FINAL E INTELIGENTE para o Evento Step do Obj_player ---
 
 var _distancia_interacao = 32;
-// --- CÓDIGO FINAL DE INTERAÇÃO para o Evento Step do Obj_player ---
 
-var _distancia_interacao = 32;
-
+// Verifica se a tecla de interação foi pressionada e se não há um diálogo ativo
 if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo))
 {
-    var _alvo_chave = instance_nearest(x, y, Obj_Chave);
-    if (_alvo_chave != noone && distance_to_object(_alvo_chave) < _distancia_interacao)
+    // --- 1. TENTA INTERAGIR COM UMA PORTA TRANCÁVEL ---
+    var _porta_perto = instance_nearest(x, y, Obj_Porta_Trancavel);
+    if (_porta_perto != noone && distance_to_object(_porta_perto) < _distancia_interacao)
     {
-        // Adiciona a chave específica ao nosso inventário
-        array_push(global.inventario_chaves, _alvo_chave.nome_da_chave);
-        
-        // Inicia o diálogo específico desta chave
-        IniciarDialogo(_alvo_chave.dialogo_ao_apanhar); // Usa a função global
-        
-        // Destrói o objeto da chave
-        instance_destroy(_alvo_chave);
-    }
-    else
-    {
-        var _alvo_porta = instance_nearest(x, y, Obj_Porta_Trancavel);
-        if (_alvo_porta != noone && distance_to_object(_alvo_porta) < _distancia_interacao)
-        {
-            if (_alvo_porta.trancada == true) {
-                var _tem_a_chave = array_contains(global.inventario_chaves, _alvo_porta.chave_necessaria);
-                if (_tem_a_chave) {
-                    with (_alvo_porta) { animando = true; }
-                    // ... destruir colisão e escuridão ...
-                } else {
-                    IniciarDialogo(_alvo_porta.dialogo_trancado);
+        // Se a porta ainda estiver trancada...
+        if (_porta_perto.trancada == true) {
+            
+            // Verifica se o jogador tem a chave necessária para ESTA porta
+            var _tem_a_chave = array_contains(global.inventario_chaves, _porta_perto.chave_necessaria);
+            
+            if (_tem_a_chave) {
+                // Sim! Destranca a porta. O evento Step dela cuidará da animação.
+                _porta_perto.trancada = false;
+
+                // AGORA, O JOGADOR LÊ A AÇÃO DA PORTA E EXECUTA-A
+                switch (_porta_perto.acao_ao_abrir)
+                {
+                    case "destruir_objetos":
+                        // Para a porta do quarto do Tyler
+                        with (Obj_quarto_escuro) { instance_destroy(); }
+                        with (Obj_colisao_porta_tyler) { instance_destroy(); }
+                        break;
+                        
+                    case "mudar_de_sala":
+                        // Para a porta de saída da casa
+                        room_goto(_porta_perto.sala_de_destino);
+                        break;
                 }
+            } else {
+                // Não tem a chave, mostra o diálogo específico desta porta
+                var _dialogo = instance_create_layer(x, y, "dialogo", Obj_dialogo);
+                _dialogo.npc_nome = "Porta"; // Assumindo que o seu Scr_texto lida com isto
             }
         }
-        else
-        {
-            var _alvo_npc = instance_nearest(x, y, Obj_ncp_parent);
-            if (_alvo_npc != noone && distance_to_object(_alvo_npc) < _distancia_interacao)
-            {
-                // Lógica de diálogo normal com NPCs
-            }
-        }
+        exit; // Sai para não interagir com mais nada neste frame
+    }
+    
+    // --- 2. TENTA APANHAR UMA CHAVE ---
+    var _chave_perto = instance_nearest(x, y, Obj_Chave);
+    if (_chave_perto != noone && distance_to_object(_chave_perto) < _distancia_interacao)
+    {
+        array_push(global.inventario_chaves, _chave_perto.nome_da_chave);
+        instance_destroy(_chave_perto);
+        var _dialogo_chave = instance_create_layer(x, y, "dialogo", Obj_dialogo);
+        _dialogo_chave.npc_nome = "Chave";
+        exit;
+    }
+    
+    // --- 3. SE NÃO, TENTA FALAR COM UM NPC NORMAL ---
+    var _npc_perto = instance_nearest(x, y, Obj_ncp_parent);
+    if (_npc_perto != noone && distance_to_object(_npc_perto) < _distancia_interacao)
+    {
+        // A sua lógica de diálogo normal com NPCs
     }
 }
 }

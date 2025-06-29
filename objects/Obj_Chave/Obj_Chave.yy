@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_porta_tyler",
+  "%Name":"Obj_Chave",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_porta_tyler",
+  "name":"Obj_Chave",
   "overriddenProperties":[],
   "parent":{
     "name":"Vila",
@@ -29,13 +28,15 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"nome_da_chave","filters":[],"listItems":[],"multiselect":false,"name":"nome_da_chave","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"chave_do_quarto_do_tyler\"","varType":2,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_porta_tyler",
-    "path":"sprites/Spr_porta_tyler/Spr_porta_tyler.yy",
+    "name":"chave",
+    "path":"sprites/chave/chave.yy",
   },
   "spriteMaskId":null,
   "visible":true,

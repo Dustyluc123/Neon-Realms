@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_chave_tyler",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Obj_colisao_porta_tyler",
+  "eventList":[],
   "managed":true,
-  "name":"Obj_chave_tyler",
+  "name":"Obj_colisao_porta_tyler",
   "overriddenProperties":[],
   "parent":{
     "name":"Vila",
     "path":"folders/Objetos/Mapa/Vila.yy",
   },
   "parentObjectId":{
-    "name":"Obj_ncp_parent",
-    "path":"objects/Obj_ncp_parent/Obj_ncp_parent.yy",
+    "name":"Obj_colisao",
+    "path":"objects/Obj_colisao/Obj_colisao.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"chave",
-    "path":"sprites/chave/chave.yy",
+    "name":"Spr_colisoa2",
+    "path":"sprites/Spr_colisoa2/Spr_colisoa2.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
