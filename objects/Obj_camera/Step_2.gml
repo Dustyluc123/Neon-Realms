@@ -3,13 +3,14 @@
 // Se uma cutscene está a acontecer, esta câmera não faz absolutamente nada.
 if (global.em_cutscene == true) 
 {
-    cutscene_estava_ativa = true; // Apenas memoriza que a cutscene está ativa
+    // Apenas diz à câmera para se preparar para o fim da cutscene
+    cutscene_estava_ativa = true; 
     exit; // Abandona o evento
 }
 
 // Se chegámos aqui, a cutscene NÃO está ativa.
 
-// Pega as dimensões e o alvo
+// Pega as dimensões e o alvo (o jogador)
 var _view_cam = view_camera[0];
 var _view_w = camera_get_view_width(_view_cam);
 var _view_h = camera_get_view_height(_view_cam);

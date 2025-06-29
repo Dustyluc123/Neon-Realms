@@ -44,6 +44,14 @@ function Scr_texto(){
 	  break;
 	  
   }
+  switch npc_nome{
+	  
+	  case "Porta":
+	  ds_grid_add_text("Está trancado . . .",Spr_retrado,0,"Yuki")
+	  ds_grid_add_text("Parece que preciso da chave do quarto do Tyler",Spr_retrado,0,"Yuki")
+	  break;
+	  
+  }
 }
 function ds_grid_add_row(){
 	///@arg ds_grid

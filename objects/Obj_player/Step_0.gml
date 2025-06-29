@@ -36,7 +36,7 @@ if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo))
     // --- ESTA É A PARTE NOVA E CRUCIAL ---
     // Verificamos qual é o objeto da instância com a qual colidimos.
     // Se for o Obj_nap_pai...
-    if (_npc.object_index == Obj_nap_pai) 
+    if (_npc.object_index == Obj_nap_pai_respirando) 
     {
         // ...então nós "viramos a chave"! O jogo agora "sabe" que a conversa aconteceu.
         global.falou_com_pai = true;
