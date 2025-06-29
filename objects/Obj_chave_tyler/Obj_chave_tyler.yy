@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_porta_tyler",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Obj_chave_tyler",
+  "eventList":[],
   "managed":true,
-  "name":"Obj_porta_tyler",
+  "name":"Obj_chave_tyler",
   "overriddenProperties":[],
   "parent":{
     "name":"Vila",
@@ -34,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_porta_tyler",
-    "path":"sprites/Spr_porta_tyler/Spr_porta_tyler.yy",
+    "name":"chave",
+    "path":"sprites/chave/chave.yy",
   },
   "spriteMaskId":null,
   "visible":true,
