@@ -4,7 +4,7 @@ function Scr_texto(){
 
   switch npc_nome{
 	  
-	  case "Car":
+	  case "Tyler":
 	  ds_grid_add_text("Bom dia",Spr_retrado,0,"personagem 1")
 	  ds_grid_add_text("Eae bom dia.",Spr_retrado2,1,"Car")
 	    ds_grid_add_text("O que temos para hoje?",Spr_retrado,0,"personagem 1")

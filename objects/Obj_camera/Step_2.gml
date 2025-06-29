@@ -1,5 +1,12 @@
 // --- NOVO CÓDIGO COMPLETO para o evento END STEP de obj_camera ---
 
+// No início do evento End Step de obj_camera
+
+if (global.em_cutscene == true) {
+    exit; // Se uma cutscene estiver a acontecer, não faça nada e saia do evento.
+}
+
+// ... o resto do seu código de seguir o jogador continua aqui ...
 // 1. Encontrar o alvo (o jogador)
 if (!instance_exists(Obj_player)) exit;
 

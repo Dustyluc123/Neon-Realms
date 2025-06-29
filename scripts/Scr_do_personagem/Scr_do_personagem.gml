@@ -41,7 +41,11 @@ cima = keyboard_check(ord("W"))
 esquerda = keyboard_check(ord("A"))
 baixo = keyboard_check(ord("S"))
 }
+hveloc = (direita - esquerda) * veloc
+ vveloc = (baixo - cima) * veloc
 
+
+Scr_personagem_colisao()
 
 //Mudar as sprites
 
