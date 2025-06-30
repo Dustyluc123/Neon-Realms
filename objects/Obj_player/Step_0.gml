@@ -14,46 +14,44 @@ if (global.dialogo == false && global.em_cutscene == false) {
 }
 
 
-// --- CÓDIGO FINAL DE INTERAÇÃO para o Evento Step do Obj_player ---
-
-var _distancia_interacao = 10;
+// --- LÓGICA DE INTERAÇÃO (tecla 'E') ---
+var _distancia_interacao = 32; // Aumentei a distância para 32 para ser mais fácil de interagir
 
 // Verifica se a tecla 'E' foi pressionada e se não estamos em diálogo/cutscene
 if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && global.em_cutscene == false)
 {
-    // --- 1. TENTA INTERAGIR COM UMA CHAVE ---
+    // --- PRIORIDADE 1: TENTA INTERAGIR COM O COFRE ---
+    var _cofre_perto = instance_nearest(x, y, Obj_Cofre);
+    if (_cofre_perto != noone && distance_to_object(_cofre_perto) < _distancia_interacao)
+    {
+        // Só cria a UI do cofre se ela já não existir
+        if (!instance_exists(Obj_Cofre_UI)) {
+            var _ui = instance_create_layer(0, 0, "Instances_UI", Obj_Cofre_UI); // Crie numa camada de UI
+            _ui.cofre_alvo = _cofre_perto; // Diz à UI qual cofre foi aberto
+        }
+        exit; // Interagiu com o cofre, não faz mais nada neste frame
+    }
+    
+    // --- PRIORIDADE 2: TENTA INTERAGIR COM UMA CHAVE ---
     var _chave_perto = instance_nearest(x, y, Obj_Chave);
     if (_chave_perto != noone && distance_to_object(_chave_perto) < _distancia_interacao)
     {
-        // --- CORREÇÃO APLICADA AQUI ---
-        // Primeiro, lemos o nome do diálogo e guardamo-lo numa variável temporária.
         var _dialogo_para_mostrar = _chave_perto.dialogo_ao_apanhar;
-
-        // Agora que já guardámos a informação, podemos apanhar a chave.
         array_push(global.inventario_chaves, _chave_perto.nome_da_chave);
-        
-        // E destruir o objeto da chave.
         instance_destroy(_chave_perto);
-        
-        // Finalmente, usamos a informação que guardámos para criar o diálogo.
         var _dialogo_chave = instance_create_layer(x, y, "dialogo", Obj_dialogo);
         _dialogo_chave.npc_nome = _dialogo_para_mostrar;
-        // --- FIM DA CORREÇÃO ---
-        
-        exit; // Sai do script para não interagir com mais nada neste frame
+        exit;
     }
     
-    // --- 2. TENTA INTERAGIR COM UMA PORTA ---
+    // --- PRIORIDADE 3: TENTA INTERAGIR COM UMA PORTA ---
     var _porta_perto = instance_nearest(x, y, Obj_Porta_Trancavel);
     if (_porta_perto != noone && distance_to_object(_porta_perto) < _distancia_interacao)
     {
         if (_porta_perto.trancada == true) {
-            
             var _tem_a_chave = array_contains(global.inventario_chaves, _porta_perto.chave_necessaria);
-            
             if (_tem_a_chave) {
                 _porta_perto.trancada = false;
-
                 switch (_porta_perto.acao_ao_abrir) {
                     case "destruir_objetos":
                         with (Obj_quarto_escuro) { instance_destroy(); }
@@ -73,7 +71,7 @@ if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && global.
         exit;
     }
 
-    // --- 3. TENTA FALAR COM UM NPC ---
+    // --- PRIORIDADE 4: TENTA FALAR COM UM NPC ---
     var _npc_perto = instance_nearest(x, y, Obj_ncp_parent);
     if (_npc_perto != noone && distance_to_object(_npc_perto) < _distancia_interacao)
     {

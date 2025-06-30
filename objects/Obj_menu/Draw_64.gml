@@ -38,7 +38,7 @@ for(var i = 0;i< op_max;i++){
 			}
 				if (index = 0){
 			
-			room_goto(casa_do_Protagonista)
+			room_goto(Room_casa_Yuki)
 			
 		
 			}

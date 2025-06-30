@@ -11,7 +11,7 @@ acao_ao_abrir = "mudar_de_sala";
 
 // 4. Define para qual sala o jogador deve ir
 // CORREÇÃO: Nomes de assets geralmente começam com letra maiúscula
-sala_de_destino = vila_do_prota;
+sala_de_destino = Room_teste_lilith;
 
 // CORREÇÃO: Usamos '=' para atribuir valores, e não ':'
 target_x = 184;
