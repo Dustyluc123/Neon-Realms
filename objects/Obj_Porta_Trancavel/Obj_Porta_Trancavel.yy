@@ -34,6 +34,8 @@
     {"$GMObjectProperty":"v1","%Name":"dialogo_trancado","filters":[],"listItems":[],"multiselect":false,"name":"dialogo_trancado","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"porta_generica_trancada\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"acao_ao_abrir","filters":[],"listItems":[],"multiselect":false,"name":"acao_ao_abrir","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"destruir_objetos\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"sala_de_destino","filters":[],"listItems":[],"multiselect":false,"name":"sala_de_destino","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"target_x","filters":[],"listItems":[],"multiselect":false,"name":"target_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"target_y","filters":[],"listItems":[],"multiselect":false,"name":"target_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

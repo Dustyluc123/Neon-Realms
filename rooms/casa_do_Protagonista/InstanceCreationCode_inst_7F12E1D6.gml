@@ -1,13 +1,18 @@
-// --- CÓDIGO DE CRIAÇÃO para a Porta de Saída da Casa ---
+// --- CÓDIGO DE CRIAÇÃO CORRIGIDO para a Porta de Saída da Casa ---
 
-// Define qual chave esta porta específica precisa
+// 1. Define qual chave esta porta específica precisa
 chave_necessaria = "chave_da_casa";
 
-// Define qual diálogo ela vai usar quando estiver trancada
+// 2. Define qual diálogo ela vai usar quando estiver trancada
 dialogo_trancado = "porta_saida_trancada";
 
-// Define o que acontece quando ela abre
+// 3. Define o que acontece quando ela abre: mudar de sala
 acao_ao_abrir = "mudar_de_sala";
 
-// Define para qual sala o jogador deve ir
+// 4. Define para qual sala o jogador deve ir
+// CORREÇÃO: Nomes de assets geralmente começam com letra maiúscula
 sala_de_destino = vila_do_prota;
+
+// CORREÇÃO: Usamos '=' para atribuir valores, e não ':'
+target_x = 184;
+target_y = 390;

@@ -30,6 +30,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"nome_da_chave","filters":[],"listItems":[],"multiselect":false,"name":"nome_da_chave","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"chave_do_quarto_do_tyler\"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"dialogo_ao_apanhar","filters":[],"listItems":[],"multiselect":false,"name":"dialogo_ao_apanhar","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"dialogo_ao_apanhar\"","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

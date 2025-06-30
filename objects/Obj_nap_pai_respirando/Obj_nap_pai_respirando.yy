@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"npc_pai",
-    "path":"sprites/npc_pai/npc_pai.yy",
+    "name":"Spr_tyler_frente",
+    "path":"sprites/Spr_tyler_frente/Spr_tyler_frente.yy",
   },
   "spriteMaskId":null,
   "visible":true,

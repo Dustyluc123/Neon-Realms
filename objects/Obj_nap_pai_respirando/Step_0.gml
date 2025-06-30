@@ -37,31 +37,31 @@ switch (estado_pai)
 
     // --- CAPÍTULOS DE MOVIMENTO COM SPRITES ---
     case PAI_ESTADO.INDO_PONTO_A:
-        sprite_index = npc_pai; // << SUA PRIMEIRA SPRITE AQUI
+        sprite_index = Spr_tyler_andando_frente; // << SUA PRIMEIRA SPRITE AQUI
         
-        var _chegou_a = mp_linear_step(160, 230, velocidade_pai, false);
+        var _chegou_a = mp_linear_step(160, 225, velocidade_pai, false);
         if (_chegou_a) { 
-            sprite_index = npc_pai; // Volta para a sprite de parado
+            sprite_index = Spr_tyler_frente; // Volta para a sprite de parado
             estado_pai = PAI_ESTADO.INDO_PONTO_B; 
         }
         break;
 
     case PAI_ESTADO.INDO_PONTO_B:
-        sprite_index = npc_pai_1; // << SUA SEGUNDA SPRITE AQUI
+        sprite_index = Spr_tyler_andando_lado; // << SUA SEGUNDA SPRITE AQUI
         
         var _chegou_b = mp_linear_step(368, 230, velocidade_pai, false);
         if (_chegou_b) { 
-            sprite_index = npc_pai; // Volta para a sprite de parado
+            sprite_index = Spr_tyler_frente; // Volta para a sprite de parado
             estado_pai = PAI_ESTADO.INDO_PONTO_C; 
         }
         break;
 
     case PAI_ESTADO.INDO_PONTO_C:
-        sprite_index = npc_pai; // << SUA TERCEIRA SPRITE AQUI
+        sprite_index = Spr_tyler_andando_costas; // << SUA TERCEIRA SPRITE AQUI
         
         var _chegou_c = mp_linear_step(368, 50, velocidade_pai, false);
         if (_chegou_c) { 
-            sprite_index = npc_pai; // Volta para a sprite de parado
+            sprite_index = Spr_tyler_frente; // Volta para a sprite de parado
             estado_pai = PAI_ESTADO.ZOOM_IN; 
         }
         break;
