@@ -1,25 +1,25 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"til_tapede2",
+  "%Name":"til_parede_normal_1",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"til_tapede2",
-  "out_columns":4,
+  "name":"til_parede_normal_1",
+  "out_columns":5,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"coisas",
-    "path":"folders/Conjuntos de tiles/coisas.yy",
+    "name":"parede",
+    "path":"folders/Conjuntos de tiles/parede.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Spr_tapede2",
-    "path":"sprites/Spr_tapede2/Spr_tapede2.yy",
+    "name":"Spr_parede_verde",
+    "path":"sprites/Spr_parede_verde/Spr_parede_verde.yy",
   },
   "spriteNoExport":true,
   "textureGroupId":{
@@ -34,5 +34,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":16,
+  "tile_count":24,
 }

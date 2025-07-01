@@ -2,7 +2,7 @@
 
 cofre_alvo = noone;
 senha_digitada = "";
-tamanho_max_senha = 4;
+tamanho_max_senha = 6;
 feedback_visual = 0;
 feedback_timer = 0;
 botao_pressionado_valor = noone; // Adicionado da nossa correção anterior
