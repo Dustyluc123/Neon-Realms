@@ -1,18 +1,11 @@
-///OBJ_Dialogo
-enum infos{
-	 Texto,
-	 Retrato,
-	 Lado,
-	 Nome
-}	
+// --- CÓDIGO CORRIGIDO para o Evento Create de Obj_dialogo ---
 
-
-npc_nome = "";
-texto_grid = ds_grid_create(4, 0);
-pagina = 0
-inicializar = false
-
+// Prepara as variáveis iniciais
+pagina = 0;
 carac = 0;
-alarm[0] = 1
+texto_grid = ds_grid_create(5, 0); // 5 colunas por causa do enum 'infos'
+global.dialogo = true;
+npc_nome = ""; // Inicia a variável como vazia
 
-
+// Variável de controlo para executar o script apenas uma vez
+inicializado = false;
