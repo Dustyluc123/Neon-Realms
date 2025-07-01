@@ -9,6 +9,8 @@ vveloc = 0;
 
 veloc = 3;
 
+var cor_aleatoria = c_white
+Scr_ligth(x, y, cor_aleatoria, 0.2 , 1, 1, id);
 my_weapon = instance_create_layer(x,y,"Weapons",Obj_armas)
 my_weapon.weapon_id=self;
 

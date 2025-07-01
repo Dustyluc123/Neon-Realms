@@ -1,2 +1,2 @@
 
-	abiente_ligth = c_dkgray
+	abiente_ligth = #454545

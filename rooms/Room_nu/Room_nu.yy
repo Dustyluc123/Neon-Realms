@@ -9,7 +9,6 @@
     {"name":"inst_7D6C573C_1_2","path":"rooms/Room_nu/Room_nu.yy",},
     {"name":"inst_64D9AB47_1_2","path":"rooms/Room_nu/Room_nu.yy",},
     {"name":"inst_7DB6B265_1_2","path":"rooms/Room_nu/Room_nu.yy",},
-    {"name":"inst_28DC6F4A_1_2","path":"rooms/Room_nu/Room_nu.yy",},
     {"name":"inst_62D1C740_1_2","path":"rooms/Room_nu/Room_nu.yy",},
     {"name":"inst_38D3BE0E_1_2","path":"rooms/Room_nu/Room_nu.yy",},
     {"name":"inst_5503BE90_1_2","path":"rooms/Room_nu/Room_nu.yy",},
@@ -41,7 +40,6 @@
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"npc","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"npc","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"prota","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v2","%Name":"inst_28DC6F4A_1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_28DC6F4A_1_2","objectId":{"name":"Obj_camera","path":"objects/Obj_camera/Obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":362.0,"y":67.0,},
         {"$GMRInstance":"v2","%Name":"inst_38D3BE0E_1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_38D3BE0E_1_2","objectId":{"name":"Obj_dash","path":"objects/Obj_dash/Obj_dash.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-113.0,"y":15.0,},
       ],"layers":[],"name":"prota","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Documento","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Documento","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
