@@ -8,8 +8,8 @@
   "name":"Obj_Cofre",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Cofre",
+    "path":"folders/Objetos/Cofre.yy",
   },
   "parentObjectId":null,
   "persistent":false,

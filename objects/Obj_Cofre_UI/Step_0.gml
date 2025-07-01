@@ -38,16 +38,15 @@ if (botao_pressionado_valor != noone)
         
         // Verifica se a senha digitada é igual à senha correta do cofre
         if (senha_digitada == cofre_alvo.senha_correta) {
-            // SUCESSO!
-            feedback_visual = 1; // Ativa a luz verde
-            feedback_timer = 60; // Mostra a luz por 1 segundo
-            
-            // Abre o documento correto que está guardado no cofre
-            var _doc = instance_create_layer(0, 0, "Instances_UI", obj_documento_viewer);
-            _doc.sprite_para_mostrar = cofre_alvo.documento_para_revelar;
-            
-            // Define um alarme para fechar o cofre depois de um tempo
-            alarm[0] = 60;
+     // --- CÓDIGO CORRIGIDO para o Evento Alarm 0 de Obj_Cofre_UI ---
+
+// 1. Abre o documento correto que está guardado no cofre
+var _doc = instance_create_layer(0, 0, "Instances_UI", obj_documento_viewer);
+_doc.sprite_para_mostrar = cofre_alvo.documento_para_revelar;
+
+// 2. Fecha a interface do cofre
+instance_destroy();
+instance_destroy();
         }
         else {
             // FALHA!

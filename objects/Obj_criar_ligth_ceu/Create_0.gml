@@ -1,4 +1,4 @@
-Scr_ligth(x,y, c_yellow,0.2,1.5,1.5,id)
+Scr_ligth(x,y, c_white,0.6,3000,3000,id)
 
 
 

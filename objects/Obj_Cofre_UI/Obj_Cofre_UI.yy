@@ -12,8 +12,8 @@
   "name":"Obj_Cofre_UI",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Cofre",
+    "path":"folders/Objetos/Cofre.yy",
   },
   "parentObjectId":null,
   "persistent":false,

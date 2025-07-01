@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"retrado",
-    "path":"folders/Sprites/retrado.yy",
+    "name":"yuki",
+    "path":"folders/Sprites/retrado/yuki.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

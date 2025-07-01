@@ -15,7 +15,7 @@ if (global.dialogo == false && global.em_cutscene == false) {
 
 
 // --- LÓGICA DE INTERAÇÃO (tecla 'E') ---
-var _distancia_interacao = 32; // Aumentei a distância para 32 para ser mais fácil de interagir
+var _distancia_interacao = 10; // Aumentei a distância para 32 para ser mais fácil de interagir
 
 // Verifica se a tecla 'E' foi pressionada e se não estamos em diálogo/cutscene
 if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && global.em_cutscene == false)

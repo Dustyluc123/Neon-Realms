@@ -5,16 +5,17 @@ function Scr_texto(){
   switch npc_nome{
 	  
 	  case "Tyler":
-	  ds_grid_add_text("Graças a Deus acordou dorminhoco, você disse que gostaria de ir a academia de polícia comigo hoje não é? ",Spr_retrado_tyler_1,1,"Tyler")
+	  ds_grid_add_text("Graças a Deus acordou dorminhoco, você disse que gostaria de ir a academia de polícia comigo hoje não é? ",Spr_retrado_tyler_normal,1,"Tyler")
 	    ds_grid_add_text("Eu só não sabia que teria que acordar tão cedo...",Spr_retrado_yuki_sono,0,"Yuki")
-		 ds_grid_add_text("Bem vindo ao mundo adulto garoto. Bem pegue seu crachá de acompanhante e vamos sair, vou te esperar lá fora.",Spr_retrado_tyler_1,1,"Tyler")
-		  ds_grid_add_text("Ah... Ok, onde você deixou?",Spr_retrado_yuki_sono,0,"Yuki")
-		   ds_grid_add_text("Não lembro hahaha, é bom que você pode dar uma rodada pela casa.",Spr_retrado_tyler_1,1,"Tyler")
-		   ds_grid_add_text("É como eu sempre digo, conheça seu lar e conhecerá todo o universo.",Spr_retrado_tyler_1,1,"Tyler")
-		     ds_grid_add_text("Essa frase nem faz sentido pai.",Spr_retrado_yuki_surpreso,0,"Yuki")
-			    ds_grid_add_text("Hahaha. Falando em frases que não fazem sentido. Uma conhecida sempre me dizia que voce pode clicar E para interagir, eu nunca entendi o que significa, mas que tal você dar uma 'interagida' pela casa em filho?",Spr_retrado_tyler_1,1,"Tyler")
+     	 ds_grid_add_text("Bem vindo ao mundo adulto garoto. Bem pegue seu crachá de acompanhante e vamos sair, vou te esperar lá fora.",Spr_retrado_tyler_normal,1,"Tyler")
+	  ds_grid_add_text("Ah... Ok, onde você deixou?",Spr_retrado_yuki_sono,0,"Yuki")
+	  ds_grid_add_text("Não lembro hahaha, é bom que você pode dar uma rodada pela casa.",Spr_retrado_tyler_normal,1,"Tyler")
+	  ds_grid_add_text("É como eu sempre digo, conheça seu lar e conhecerá todo o universo.",Spr_retrado_tyler_normal,1,"Tyler")
+	  ds_grid_add_text("Essa frase nem faz sentido pai.",Spr_retrado_yuki_surpreso,0,"Yuki") 
+	  ds_grid_add_text("Hahaha. Falando em frases que não fazem sentido. Uma conhecida sempre me dizia que voce pode clicar E para interagir, eu nunca entendi o que significa, mas que tal você dar uma 'interagida' pela casa em filho?",Spr_retrado_tyler_normal,1,"Tyler")
+	  ds_grid_add_text("É... a gente não tava com pressa?",Spr_retrado_yuki_surpreso,0,"Yuki")
+	  ds_grid_add_text("Eu nuca chego no horário mesmo. ",Spr_retrado_tyler_normal,1,"Tyler")
 	  ds_grid_add_text(". . . que?",Spr_retrado_yuki_surpreso,0,"Yuki")
-	 
 	  break;
 	 
   }
@@ -22,15 +23,15 @@ function Scr_texto(){
 	  
 	  case "Elisa":
 	  ds_grid_add_text("Bom dafeasfdgia",Spr_retrado_yuki_normal,0,"personagem 1")
-	  ds_grid_add_text("Eae bsergfhom dia.",Spr_retrado_tyler_1,1,"Car")
+	  ds_grid_add_text("Eae bsergfhom dia.",Spr_retrado_tyler_normal,1,"Car")
 	    ds_grid_add_text("O que asdgfngrdgfnhtemos para hoje?",Spr_retrado_yuki_normal,0,"personagem 1")
-	  ds_grid_add_text("Treino desdfe tiro ao alvo",Spr_retrado_tyler_1,1,"Car")
+	  ds_grid_add_text("Treino desdfe tiro ao alvo",Spr_retrado_tyler_normal,1,"Car")
 
 	   case "sa":
 	  ds_grid_add_text("Boia",Spr_retrado_yuki_normal,0,"personagem 1")
-	  ds_grid_add_text("Eae m dia.",Spr_retrado_tyler_1,1,"Car")
+	  ds_grid_add_text("Eae m dia.",Spr_retrado_tyler_normal,1,"Car")
 	    ds_grid_add_text("O que asdgfngrdgfnhtemos para hoje?",Spr_retrado_yuki_normal,0,"personagem 1")
-	  ds_grid_add_text("Trero ao alvo",Spr_retrado_tyler_1,1,"Car")
+	  ds_grid_add_text("Trero ao alvo",Spr_retrado_tyler_normal,1,"Car")
 	  break;
 	  
   }

@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"Spr_retrado_tyler_1",
+  "%Name":"Spr_retrado_tyler_tristinho",
   "bboxMode":0,
   "bbox_bottom":63,
   "bbox_left":0,
@@ -12,28 +12,28 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ad65dbb3-917b-4477-86cd-3b7e033d1640","name":"ad65dbb3-917b-4477-86cd-3b7e033d1640","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"bd3f9cb3-f59f-4b19-b7ce-f267d1ab7c11","name":"bd3f9cb3-f59f-4b19-b7ce-f267d1ab7c11","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"f5c699bf-5def-43b6-8402-818927c359be","blendMode":0,"displayName":"default","isLocked":false,"name":"f5c699bf-5def-43b6-8402-818927c359be","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e1b9e170-92c3-4844-a75c-3be02c4dc752","blendMode":0,"displayName":"default","isLocked":false,"name":"e1b9e170-92c3-4844-a75c-3be02c4dc752","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"Spr_retrado_tyler_1",
+  "name":"Spr_retrado_tyler_tristinho",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"retrado",
-    "path":"folders/Sprites/retrado.yy",
+    "name":"tyler",
+    "path":"folders/Sprites/retrado/tyler.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"Spr_retrado_tyler_1",
+    "%Name":"Spr_retrado_tyler_tristinho",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"Spr_retrado_tyler_1",
+    "name":"Spr_retrado_tyler_tristinho",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ad65dbb3-917b-4477-86cd-3b7e033d1640","path":"sprites/Spr_retrado_tyler_1/Spr_retrado_tyler_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cbf7e1a0-b38b-489f-b5e1-cd17707c401f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bd3f9cb3-f59f-4b19-b7ce-f267d1ab7c11","path":"sprites/Spr_retrado_tyler_tristinho/Spr_retrado_tyler_tristinho.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4b69c883-6a26-48b6-bfe2-069281c0c048","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -81,7 +81,7 @@
     "yorigin":32,
   },
   "swatchColours":null,
-  "swfPrecision":2.525,
+  "swfPrecision":0.5,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",
