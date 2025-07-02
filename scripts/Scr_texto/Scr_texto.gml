@@ -4,9 +4,14 @@ function Scr_texto(){
 
   // --- CÓDIGO CORRIGIDO para o seu switch no Scr_texto ---
 
+    // --- Diálogo do Tyler ---
+// --- CÓDIGO FINAL E UNIFICADO para o seu Scr_texto ---
+
+// A sua função ds_grid_add_text e o enum infos devem estar aqui ou num script global
+
 switch (npc_nome)
 {
-    // --- Diálogo do Tyler ---
+    // --- DIÁLOGOS DOS PERSONAGENS ---
     case "Tyler":
         ds_grid_add_text("Graças a Deus acordou dorminhoco, você disse que gostaria de ir a academia de polícia comigo hoje não é? ", Spr_retrado_tyler_normal, 1, "Tyler", Spr_dialogo_1);
         ds_grid_add_text("Eu só não sabia que teria que acordar tão cedo...", Spr_retrado_yuki_sono, 0, "Yuki", Spr_dialogo);
@@ -21,7 +26,6 @@ switch (npc_nome)
         ds_grid_add_text(". . . que?", Spr_retrado_yuki_surpreso, 0, "Yuki", Spr_dialogo);
         break;
 
-    // --- Diálogo da Elisa ---
     case "Elisa":
         ds_grid_add_text("Bom dafeasfdgia", Spr_retrado_yuki_normal, 0, "personagem 1", Spr_dialogo);
         ds_grid_add_text("Eae bsergfhom dia.", Spr_retrado_tyler_normal, 1, "Car", Spr_dialogo_1);
@@ -29,7 +33,6 @@ switch (npc_nome)
         ds_grid_add_text("Treino desdfe tiro ao alvo", Spr_retrado_tyler_normal, 1, "Car", Spr_dialogo_1);
         break;
 
-    // --- Outro Diálogo ---
     case "sa":
         ds_grid_add_text("Boia", Spr_retrado_yuki_normal, 0, "personagem 1", Spr_dialogo);
         ds_grid_add_text("Eae m dia.", Spr_retrado_tyler_normal, 1, "Car", Spr_dialogo_1);
@@ -37,7 +40,7 @@ switch (npc_nome)
         ds_grid_add_text("Trero ao alvo", Spr_retrado_tyler_normal, 1, "Car", Spr_dialogo_1);
         break;
 
-    // --- Interações com Objetos ---
+    // --- INTERAÇÕES COM OBJETOS ---
     case "Espelho":
         ds_grid_add_text("Por algum motivo eu não consigo me ver nessas coisas, parece preguiça do criador eu não me ver nisso. Talvez eu seja um vampiro", Spr_retrado_yuki_normal, 0, "Yuki", Spr_dialogo);
         break;
@@ -50,7 +53,7 @@ switch (npc_nome)
         ds_grid_add_text("Barvel vs Pc A luta sobre heróis e computadores malignos.", Spr_retrado_yuki_normal, 0, "Yuki", Spr_dialogo);
         break;
 
-    // --- Diálogos do Sistema de Portas e Chaves ---
+    // --- DIÁLOGOS DO SISTEMA ---
     case "porta_tyler_trancada":
         ds_grid_add_text("Está trancado...", Spr_retrado_yuki_normal, 0, "Yuki", Spr_dialogo);
         ds_grid_add_text("Preciso da chave do quarto do Tyler.", Spr_retrado_yuki_normal, 0, "Yuki", Spr_dialogo);
