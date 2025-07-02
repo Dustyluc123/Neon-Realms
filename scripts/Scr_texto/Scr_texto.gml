@@ -21,23 +21,7 @@ function Scr_texto(){
         break;
 	 
   }
-   switch npc_nome{
-	  
-	  case "Elisa":
-        ds_grid_add_text("Bom dafeasfdgia", Spr_retrado_yuki_normal, 0, "personagem 1", Spr_dialogo);
-        ds_grid_add_text("Eae bsergfhom dia.", Spr_retrado_tyler_normal, 1, "Car", Spr_dialogo_1);
-        ds_grid_add_text("O que asdgfngrdgfnhtemos para hoje?", Spr_retrado_yuki_normal, 0, "personagem 1", Spr_dialogo);
-        ds_grid_add_text("Treino desdfe tiro ao alvo", Spr_retrado_tyler_normal, 1, "Car", Spr_dialogo_1);
-        break;
-
-    case "sa":
-        ds_grid_add_text("Boia", Spr_retrado_yuki_normal, 0, "personagem 1", Spr_dialogo);
-        ds_grid_add_text("Eae m dia.", Spr_retrado_tyler_normal, 1, "Car", Spr_dialogo_1);
-        ds_grid_add_text("O que asdgfngrdgfnhtemos para hoje?", Spr_retrado_yuki_normal, 0, "personagem 1", Spr_dialogo);
-        ds_grid_add_text("Trero ao alvo", Spr_retrado_tyler_normal, 1, "Car", Spr_dialogo_1);
-        break;
-	  
-  }
+   
      switch npc_nome{
 	  case "Espelho":
         ds_grid_add_text("Por algum motivo eu não consigo me ver nessas coisas, parece preguiça do criador eu não me ver nisso. Talvez eu seja um vampiro", Spr_retrado_yuki_normal, 0, "Yuki", Spr_dialogo);
@@ -83,6 +67,33 @@ switch (npc_nome)
         break;
 }
 
+switch (npc_nome)
+{
+  
+ case "Elisa":
+  ds_grid_add_text("Então, filho, o que você quer fazer agora?", Spr_retrado_tyler_normal, 1, "Tyler", Spr_dialogo_1);
+    // A última linha é uma escolha!
+    ds_grid_add_choice(
+        "Vamos para a academia.", "dialogo_academia",
+        "Acho que vou explorar mais um pouco.", "dialogo_explorar",
+        "Na verdade, quero dormir mais.", "dialogo_dormir"
+    );
+    break;
+
+// Respostas possíveis
+case "dialogo_academia":
+    ds_grid_add_text("Ótima escolha! Vamos.", Spr_retrado_tyler_normal, 1, "Tyler", Spr_dialogo_1);
+    break;
+
+case "dialogo_explorar":
+    ds_grid_add_text("Sem problemas. Tenha cuidado por aí.", Spr_retrado_tyler_normal, 1, "Tyler", Spr_dialogo_1);
+    break;
+
+case "dialogo_dormir":
+    ds_grid_add_text("Hahaha, preguiçoso como sempre.", Spr_retrado_tyler_normal, 1, "Tyler", Spr_dialogo_1);
+    break;
+}
+
 
 }
 function ds_grid_add_row(){
@@ -94,19 +105,46 @@ function ds_grid_add_row(){
 }
 // --- CÓDIGO ATUALIZADO para a função ds_grid_add_text no seu Scr_texto ---
 
+// --- ATUALIZE a sua ds_grid_add_text ---
+
 function ds_grid_add_text(){
-	///@arg texto
-	///@arg retrato
-	///@arg lado
-	///@arg nome
-    ///@arg caixa_sprite  // <<< NOVO ARGUMENTO
- 
+	///@arg texto, retrato, lado, nome, caixa_sprite
 	var _grid = texto_grid;
 	var _y = ds_grid_add_row(_grid);
- 
-	_grid[# 0, _y] = argument[0]; // Texto
-	_grid[# 1, _y] = argument[1]; // Retrato
-	_grid[# 2, _y] = argument[2]; // Lado
-	_grid[# 3, _y] = argument[3]; // Nome
-    _grid[# 4, _y] = argument[4]; // <<< NOVA LINHA: Guarda a sprite da caixa de diálogo
+    
+	_grid[# 0, _y] = argument[0];
+	_grid[# 1, _y] = argument[1];
+	_grid[# 2, _y] = argument[2];
+	_grid[# 3, _y] = argument[3];
+    _grid[# 4, _y] = argument[4];
+    
+    _grid[# 5, _y] = "fala"; // <<< ADICIONE APENAS ESTA LINHA
 }
+// --- ADICIONE ESTA NOVA FUNÇÃO ao seu Scr_texto ---
+
+// Função para adicionar uma linha que contém escolhas para o jogador
+// --- ADICIONE ESTA NOVA FUNÇÃO ao seu Scr_texto ---
+
+// Função para adicionar uma linha que contém escolhas para o jogador
+// No seu Scr_texto
+function ds_grid_add_choice() {
+    var _grid = texto_grid;
+    var _y = ds_grid_add_row(_grid);
+
+    _grid[# infos.TipoDeLinha, _y] = "escolha";
+
+    var _opcoes = [];
+    for (var i = 0; i < argument_count; i += 2) {
+        array_push(_opcoes, { texto: argument[i], alvo: argument[i+1] });
+    }
+    _grid[# infos.DadosDaEscolha, _y] = _opcoes;
+
+    // --- LINHAS ADICIONADAS ---
+    // Preenche as outras colunas com valores vazios para segurança
+    _grid[# infos.Texto, _y] = "";
+    _grid[# infos.Retrato, _y] = -1; // -1 significa "nenhum sprite"
+    _grid[# infos.Lado, _y] = 0;
+    _grid[# infos.Nome, _y] = "";
+    _grid[# infos.CaixaDeDialogo, _y] = Spr_dialogo; // Uma caixa de diálogo padrão
+}
+

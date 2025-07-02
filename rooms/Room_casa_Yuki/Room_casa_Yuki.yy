@@ -55,6 +55,7 @@
     {"name":"inst_1643443F","path":"rooms/Room_casa_Yuki/Room_casa_Yuki.yy",},
     {"name":"inst_703D7236","path":"rooms/Room_casa_Yuki/Room_casa_Yuki.yy",},
     {"name":"inst_6A6A6508","path":"rooms/Room_casa_Yuki/Room_casa_Yuki.yy",},
+    {"name":"inst_705CE16A","path":"rooms/Room_casa_Yuki/Room_casa_Yuki.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -119,6 +120,7 @@
     {"$GMRInstanceLayer":"","%Name":"Instances_4","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_C4FABB3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_C4FABB3","objectId":{"name":"obj_documento_interagivel_yuki_bebe","path":"objects/obj_documento_interagivel_yuki_bebe/obj_documento_interagivel_yuki_bebe.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":228.0,"y":209.5,},
         {"$GMRInstance":"v2","%Name":"inst_6A6A6508","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6A6A6508","objectId":{"name":"Obj_camera","path":"objects/Obj_camera/Obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":285.0,},
+        {"$GMRInstance":"v2","%Name":"inst_705CE16A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_705CE16A","objectId":{"name":"Obj_npc_elisa","path":"objects/Obj_npc_elisa/Obj_npc_elisa.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":191.0,"y":113.0,},
       ],"layers":[],"name":"Instances_4","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":900,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_485E7FD5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_485E7FD5","objectId":{"name":"Obj_colisao","path":"objects/Obj_colisao/Obj_colisao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.5,"scaleY":0.25,"x":112.0,"y":168.0,},

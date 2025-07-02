@@ -17,10 +17,7 @@
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":{
-    "name":"casa",
-    "path":"sprites/casa/casa.yy",
-  },
+  "spriteId":null,
   "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
