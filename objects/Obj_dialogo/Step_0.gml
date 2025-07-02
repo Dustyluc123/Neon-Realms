@@ -1,28 +1,28 @@
-// --- NOVO CÓDIGO para o Evento Step de Obj_dialogo ---
+///OBJ_Dialogo
 
-// SE o diálogo ainda não foi inicializado...
-if (inicializado == false)
-{
-    // ...executa o script que preenche o grid com o texto.
-    script_execute(Scr_texto);
-
-    // Se, mesmo depois de executar o script, não houver texto, destrói-se para não travar o jogo.
-    if (ds_grid_height(texto_grid) == 0) {
-        instance_destroy();
-        exit;
-    }
-
-    // Marca como inicializado para não executar esta parte de novo.
-    inicializado = true;
+if inicializar == false{
+	Scr_texto()
+	inicializar= true
+	
 }
 
-// --- A sua lógica antiga para avançar o diálogo com a tecla 'E' continua aqui ---
-if (keyboard_check_pressed(ord("E")))
-{
-    // (O seu código para avançar a 'pagina' ou destruir a instância vai aqui)
-    // ...
+if mouse_check_button_pressed(mb_left){
+	if carac < string_length(texto_grid[# infos.Texto, pagina]){
+		
+		carac = string_length(texto_grid[# infos.Texto, pagina])
+	
+	}else{
+		
+		alarm[0] = 1
+		carac = 0
+	if pagina < ds_grid_height(texto_grid) - 1 {
+		pagina++;
+	}else{
+
+    global.dialogo = false;
+	instance_destroy()	
+	}
+}
 }
 
-// --- A sua lógica antiga do efeito "máquina de escrever" continua aqui ---
-// (O seu código que aumenta a variável 'carac' a cada passo vai aqui)
-// ...
+
