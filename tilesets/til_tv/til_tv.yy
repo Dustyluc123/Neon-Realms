@@ -17,10 +17,7 @@
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":{
-    "name":"Spr_tv",
-    "path":"sprites/Spr_tv/Spr_tv.yy",
-  },
+  "spriteId":null,
   "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"mapa",
-    "path":"folders/Sprites/mapa.yy",
+    "name":"cofre",
+    "path":"folders/Sprites/mapa/coisas\r\ncoisas/cofre.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

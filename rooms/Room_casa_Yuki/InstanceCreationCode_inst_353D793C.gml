@@ -8,3 +8,4 @@ dialogo_trancado = "porta_tyler_trancada";
 
 // Define o que acontece quando ela abre
 acao_ao_abrir = "destruir_objetos";
+visible= false;

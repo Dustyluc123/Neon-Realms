@@ -8,8 +8,8 @@
   "name":"Obj_Espelho",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos_do_cenario",
-    "path":"folders/Objetos/Dialogo/Dialogos_criados/Objetos_do_cenario.yy",
+    "name":"Casas",
+    "path":"folders/Objetos/Dialogo/Dialogos_criados/Objetos_do_cenario/Casas.yy",
   },
   "parentObjectId":{
     "name":"Obj_ncp_parent",
@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_espelho2_1",
+    "path":"sprites/Spr_espelho2_1/Spr_espelho2_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

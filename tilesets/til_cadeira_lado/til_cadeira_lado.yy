@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"coisas",
-    "path":"folders/Conjuntos de tiles/coisas.yy",
+    "name":"group1",
+    "path":"folders/Conjuntos de tiles/coisas/group1.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

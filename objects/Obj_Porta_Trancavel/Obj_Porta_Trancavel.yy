@@ -41,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_porta_tyler",
-    "path":"sprites/Spr_porta_tyler/Spr_porta_tyler.yy",
+    "name":"Sprite176",
+    "path":"sprites/Sprite176/Sprite176.yy",
   },
   "spriteMaskId":null,
   "visible":true,

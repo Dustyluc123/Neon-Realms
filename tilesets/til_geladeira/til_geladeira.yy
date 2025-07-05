@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"til_geladeira",
-  "out_columns":16,
+  "out_columns":12,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -17,10 +17,7 @@
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":{
-    "name":"Spr_geladeira",
-    "path":"sprites/Spr_geladeira/Spr_geladeira.yy",
-  },
+  "spriteId":null,
   "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
@@ -34,5 +31,5 @@
   "tileWidth":4,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":256,
+  "tile_count":144,
 }

@@ -17,10 +17,7 @@
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":{
-    "name":"Spr_Guittara",
-    "path":"sprites/Spr_Guittara/Spr_Guittara.yy",
-  },
+  "spriteId":null,
   "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",

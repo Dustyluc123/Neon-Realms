@@ -19,5 +19,3 @@ target_y = 180;
 
 // No Código de Criação da Instância da porta de saída
 
-visible = false; // Torna esta instância invisível
-

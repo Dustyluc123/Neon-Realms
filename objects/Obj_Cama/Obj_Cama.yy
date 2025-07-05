@@ -8,8 +8,8 @@
   "name":"Obj_Cama",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos_do_cenario",
-    "path":"folders/Objetos/Dialogo/Dialogos_criados/Objetos_do_cenario.yy",
+    "name":"Casas",
+    "path":"folders/Objetos/Dialogo/Dialogos_criados/Objetos_do_cenario/Casas.yy",
   },
   "parentObjectId":{
     "name":"Obj_ncp_parent",
