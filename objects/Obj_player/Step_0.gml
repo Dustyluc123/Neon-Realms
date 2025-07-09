@@ -11,11 +11,34 @@ tempo = max(tempo - 1, 0);
 // Executa o estado atual (movimento, etc.) se não houver diálogo ou cutscene
 if (global.dialogo == false && global.em_cutscene == false) {
     script_execute(estado);
+	// --- CÓDIGO para adicionar ao Step do Obj_player ---
+
+// --- Lógica de Troca de Armas ---
+var _trocar_para_1 = keyboard_check_pressed(ord("1"));
+var _trocar_para_2 = keyboard_check_pressed(ord("2"));
+
+// Se o jogador pressionar "1" e a arma primária existir
+if (_trocar_para_1 && global.inventario.arma_primaria != noone) {
+    global.inventario.arma_equipada_slot = 1;
+}
+
+// Se o jogador pressionar "2" e a arma secundária existir
+if (_trocar_para_2 && global.inventario.arma_secundaria != noone) {
+    global.inventario.arma_equipada_slot = 2;
+}
+
+// --- Atualiza qual é a arma ativa ---
+// A sua variável "my_weapon" agora vai buscar a arma do slot correto.
+if (global.inventario.arma_equipada_slot == 1) {
+    my_weapon = global.inventario.arma_primaria;
+} else {
+    my_weapon = global.inventario.arma_secundaria;
+}
 }
 
 
 // --- LÓGICA DE INTERAÇÃO (tecla 'E') ---
-var _distancia_interacao = 10; // Aumentei a distância para 32 para ser mais fácil de interagir
+var _distancia_interacao = 10; 
 
 // Verifica se a tecla 'E' foi pressionada e se não estamos em diálogo/cutscene
 if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && global.em_cutscene == false)
