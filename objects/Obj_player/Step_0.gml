@@ -60,7 +60,7 @@ if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && global.
     if (_chave_perto != noone && distance_to_object(_chave_perto) < _distancia_interacao)
     {
         var _dialogo_para_mostrar = _chave_perto.dialogo_ao_apanhar;
-        array_push(global.inventario_chaves, _chave_perto.nome_da_chave);
+        array_push(global.inventario.chaves, _chave_perto.nome_da_chave);
         instance_destroy(_chave_perto);
         var _dialogo_chave = instance_create_layer(x, y, "dialogo", Obj_dialogo);
         _dialogo_chave.npc_nome = _dialogo_para_mostrar;
@@ -72,7 +72,7 @@ if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && global.
     if (_porta_perto != noone && distance_to_object(_porta_perto) < _distancia_interacao)
     {
         if (_porta_perto.trancada == true) {
-            var _tem_a_chave = array_contains(global.inventario_chaves, _porta_perto.chave_necessaria);
+            var _tem_a_chave = array_contains(global.inventario.chaves, _porta_perto.chave_necessaria);
             if (_tem_a_chave) {
                 _porta_perto.trancada = false;
                 switch (_porta_perto.acao_ao_abrir) {

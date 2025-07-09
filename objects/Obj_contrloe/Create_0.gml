@@ -1,30 +1,35 @@
-// --- CÓDIGO ATUALIZADO para o Create de Obj_contrloe ---
+// --- CÓDIGO CREATE FINAL E CORRIGIDO para Obj_contrloe ---
 
-// Apague as suas variáveis globais antigas de inventário.
+// Garante que só existe uma instância deste objeto no jogo
+if (instance_number(object_index) > 1) 
+{
+    instance_destroy();
+    exit; 
+}
 
-// A nossa nova ficha de inventário completa!
+// Torna este objeto "imortal"
+persistent = true;
+
+// A sua estrutura de inventário
 global.inventario = {
-    
-    // -- Armas --
-    arma_primaria: noone, // "noone" significa que o slot está vazio
+    arma_primaria: noone,
     arma_secundaria: noone,
-    arma_equipada_slot: 1, // 1 para primária, 2 para secundária
-    
-    armas_na_mochila: [], // Array para guardar as armas que não estão equipadas
-
-    // -- Chaves --
-    // O seu sistema de chaves continua igual, mas agora dentro do inventário
-    chaves: [], // Substitui o antigo global.inventario_chaves
-
-    // -- Armadura --
+    arma_equipada_slot: 1,
+    armas_na_mochila: [],
+    chaves: [],
     armadura_equipada: "nenhuma"
 };
 
-// Exemplo: O jogador começa com uma pistola já equipada no slot primário.
-// (Você pode criar esta arma no início do jogo)
-global.inventario.arma_primaria = instance_create_layer(x, y, "Instances", Obj_pistol);
-with (global.inventario.arma_primaria) {
-    // Esconde a arma inicial até que o jogador a use
-    visible = false;
-    dono = other.id; // Supondo que a arma precise de um "dono"
-}
+// Variáveis para a posição de spawn do jogador
+global.proximo_player_x = noone;
+global.proximo_player_y = noone;
+
+// Variável para a cutscene do pai
+global.falou_com_pai = false;
+
+// Variável para o estado de diálogo
+global.dialogo = false;
+
+// --- LINHA QUE FALTAVA (A CORREÇÃO ESTÁ AQUI) ---
+// Declara a variável global para saber se uma cutscene está ativa
+global.em_cutscene = false;
