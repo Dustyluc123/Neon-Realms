@@ -83,36 +83,36 @@ switch dir {
 }
 }
 
-// Só executa a lógica da arma se o jogador tiver uma arma equipada
-// --- CÓDIGO CORRIGIDO para a lógica da Arma em Scr_personagem_andando ---
 
 //Arma
 if (instance_exists(my_weapon))
-{
-    // O with(my_weapon) é usado apenas para posicionar a arma visualmente
-    with(my_weapon) {
-        weapon_dir = point_direction(other.x, other.y, mouse_x, mouse_y);
-        image_angle = weapon_dir;
-        x = other.x + lengthdir_x(6, weapon_dir);
-        y = other.y + lengthdir_y(6, weapon_dir);
-    }
+    {
+        // Posiciona a arma visualmente
+        with(my_weapon) {
+            weapon_dir = point_direction(other.x, other.y, mouse_x, mouse_y);
+            image_angle = weapon_dir;
+            x = other.x + lengthdir_x(6, weapon_dir);
+            y = other.y + lengthdir_y(6, weapon_dir);
+        }
 
-    // Lógica de Tiro
-    var mb;
-    if (automatic) { // Lê a variável do JOGADOR
-        mb = mouse_check_button(mb_left);
-    } else {
-        mb = mouse_check_button_pressed(mb_left);
-    }
-    
-    if (mb) {
-        atirar();
+        // Lógica de Tiro
+        var mb;
+        // A verificação agora lê a variável 'automatic' DO JOGADOR!
+        if (automatic) {
+            mb = mouse_check_button(mb_left);
+        } else {
+            mb = mouse_check_button_pressed(mb_left);
+        }
+        
+        if (mb) {
+            atirar(); // Chama a função de tiro
+        }
     }
     
     // --- LÓGICA DE LARGAR A ARMA CORRIGIDA ---
+    // Esta lógica agora está FORA do 'with(my_weapon)'
     var key_drop = keyboard_check_pressed(ord("F"));
-    // A verificação agora é mais simples: se o jogador apertar 'F' e tiver uma arma...
-    if (key_drop && weapon > 0) 
+    if (key_drop && weapon > 0) // "weapon" é a variável do jogador com o ID da arma
     {
         // Cria a arma no chão
         var _inst_drop = instance_create_layer(x, y, "Instances", drop);
@@ -128,7 +128,7 @@ if (instance_exists(my_weapon))
         // Equipa "mãos vazias"
         Scr_mudar_arma(self, 0);
     }
-}
+    
 ////dash
 if mouse_check_button_pressed(mb_right){
     alarm[0] = 8
