@@ -134,6 +134,7 @@
     {"id":{"name":"Obj_guitarra","path":"objects/Obj_guitarra/Obj_guitarra.yy",},},
     {"id":{"name":"Obj_hud","path":"objects/Obj_hud/Obj_hud.yy",},},
     {"id":{"name":"Obj_inimigo","path":"objects/Obj_inimigo/Obj_inimigo.yy",},},
+    {"id":{"name":"Obj_Inventario_UI","path":"objects/Obj_Inventario_UI/Obj_Inventario_UI.yy",},},
     {"id":{"name":"Obj_ir_casa","path":"objects/Obj_ir_casa/Obj_ir_casa.yy",},},
     {"id":{"name":"Obj_ir_vila","path":"objects/Obj_ir_vila/Obj_ir_vila.yy",},},
     {"id":{"name":"Obj_janela_1","path":"objects/Obj_janela_1/Obj_janela_1.yy",},},

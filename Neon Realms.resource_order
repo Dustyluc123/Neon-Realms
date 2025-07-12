@@ -95,6 +95,7 @@
     {"name":"Obj_guitarra","order":11,"path":"objects/Obj_guitarra/Obj_guitarra.yy",},
     {"name":"Obj_hud","order":5,"path":"objects/Obj_hud/Obj_hud.yy",},
     {"name":"Obj_inimigo","order":1,"path":"objects/Obj_inimigo/Obj_inimigo.yy",},
+    {"name":"Obj_Inventario_UI","order":11,"path":"objects/Obj_Inventario_UI/Obj_Inventario_UI.yy",},
     {"name":"Obj_ir_casa","order":1,"path":"objects/Obj_ir_casa/Obj_ir_casa.yy",},
     {"name":"Obj_janela_1","order":12,"path":"objects/Obj_janela_1/Obj_janela_1.yy",},
     {"name":"Obj_lamina","order":2,"path":"objects/Obj_lamina/Obj_lamina.yy",},
