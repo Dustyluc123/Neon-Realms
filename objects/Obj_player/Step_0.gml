@@ -14,23 +14,30 @@ if (!instance_exists(my_weapon)) {
 
 // --- Ações do jogador (movimento, troca de armas, etc.) ---
 // Só executa se não houver diálogo ou cutscene.
-if (global.dialogo == false && global.em_cutscene == false) 
-{
-    // Executa o estado atual (andando, dash, etc.), que controla o movimento.
-    script_execute(estado);
+// --- LÓGICA DE AÇÃO DO JOGADOR ---
+if (!global.dialogo && !global.em_cutscene) {
+    script_execute(estado); // Controla movimento/animação
 
-    // --- Lógica de Troca de Armas (teclas 1 e 2) ---
-    var _trocar_para_1 = keyboard_check_pressed(ord("1"));
-    var _trocar_para_2 = keyboard_check_pressed(ord("2"));
+    // Lógica de troca de arma com '1' e '2'
+    // ...
 
-    if (_trocar_para_1 && global.inventario.arma_primaria != noone) {
-        global.inventario.arma_equipada_slot = 1;
-        weapon_update_equipped(); // Atualiza a arma imediatamente
+    // Lógica de tiro e largar arma com 'F'
+    if (instance_exists(my_weapon)) {
+        var mb = mouse_check_button(mb_left) || (automatic && mouse_check_button(mb_left));
+        if (mb) { atirar(); }
+        if (keyboard_check_pressed(ord("F"))) { weapon_drop(); }
     }
-    if (_trocar_para_2 && global.inventario.arma_secundaria != noone) {
-        global.inventario.arma_equipada_slot = 2;
-        weapon_update_equipped(); // Atualiza a arma imediatamente
+}
+
+// --- LÓGICA DE INTERAÇÃO COM 'E' ---
+if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && !global.em_cutscene) {
+    // Prioridade 1: Apanhar Arma
+    var _arma_perto = instance_nearest(x, y, Obj_weapon_drop);
+    if (_arma_perto != noone && distance_to_object(_arma_perto) < 48) {
+        weapon_pickup();
+        exit;
     }
+    // O resto da lógica de interação (cofre, chaves, portas, NPCs) vem aqui...
 }
 
 // --- Lógica de Interação Unificada (tecla 'E') ---

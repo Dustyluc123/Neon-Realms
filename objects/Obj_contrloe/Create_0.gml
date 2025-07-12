@@ -1,30 +1,15 @@
-// --- CÓDIGO ATUALIZADO para o Create de Obj_contrloe ---
-
-// Garante que só existe uma instância deste objeto no jogo
-if (instance_number(object_index) > 1) {
-    instance_destroy();
-    exit; 
-}
-
-// Torna este objeto "imortal"
+// Garante que só existe uma instância
+if (instance_number(object_index) > 1) { instance_destroy(); exit; }
 persistent = true;
 
 // A nossa nova ficha de inventário completa!
 global.inventario = {
-    
-    // -- Armas --
-    arma_primaria: noone,       // "noone" significa que o slot está vazio. Guarda o ID da instância da arma.
+    arma_primaria: noone,
     arma_secundaria: noone,
-    arma_equipada_slot: 1,      // 1 para primária, 2 para secundária. O jogador começa com a primária.
-    
-    armas_na_mochila: [],       // Array para guardar os TIPOS de arma (ex: Obj_pistol) que não estão equipadas.
-
-    // -- Chaves --
-    // O seu sistema de chaves continua igual, mas agora dentro do inventário.
-    chaves: [],                 // Substitui o antigo global.inventario_chaves.
-
-    // -- Armadura --
-    armadura_equipada: "nenhuma" // Slot para a sua futura armadura.
+    arma_equipada_slot: 1,
+    armas_na_mochila: [],
+    chaves: [],
+    armadura_equipada: "nenhuma"
 };
 
 // --- Outras Variáveis Globais ---
