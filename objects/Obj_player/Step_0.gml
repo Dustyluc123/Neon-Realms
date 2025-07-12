@@ -7,41 +7,46 @@ if (imune == true) { hit_alpha = 1; } else { hit_alpha = 0; }
 tempo = max(tempo - 1, 0);
 
 // --- Garante que a arma equipada está sempre sincronizada ---
+// Se a arma atual não existir (foi largada, por exemplo), atualiza para a próxima disponível.
 if (!instance_exists(my_weapon)) {
     weapon_update_equipped();
 }
 
 // --- Ações do jogador (movimento, troca de armas, etc.) ---
-if (!global.dialogo && !global.em_cutscene) {
-    script_execute(estado); // movimento, dash, etc.
+// Só executa se não houver diálogo ou cutscene.
+if (global.dialogo == false && global.em_cutscene == false) 
+{
+    // Executa o estado atual (andando, dash, etc.), que controla o movimento.
+    script_execute(estado);
 
-    // Troca de armas (teclas 1 e 2)
+    // --- Lógica de Troca de Armas (teclas 1 e 2) ---
     var _trocar_para_1 = keyboard_check_pressed(ord("1"));
     var _trocar_para_2 = keyboard_check_pressed(ord("2"));
 
     if (_trocar_para_1 && global.inventario.arma_primaria != noone) {
         global.inventario.arma_equipada_slot = 1;
-        weapon_update_equipped();
+        weapon_update_equipped(); // Atualiza a arma imediatamente
     }
     if (_trocar_para_2 && global.inventario.arma_secundaria != noone) {
         global.inventario.arma_equipada_slot = 2;
-        weapon_update_equipped();
+        weapon_update_equipped(); // Atualiza a arma imediatamente
     }
 }
 
-// --- Interações (tecla 'E') ---
+// --- Lógica de Interação Unificada (tecla 'E') ---
 var _distancia_interacao = 48;
 
-if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && !global.em_cutscene) {
-    
-    // 1. Pegar arma do chão
+// Só permite interagir se não estiver em diálogo ou cutscene.
+if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && !global.em_cutscene) 
+{
+    // --- Prioridade 1: Tenta Apanhar uma Arma ---
     var _arma_perto = instance_nearest(x, y, Obj_weapon_drop);
     if (_arma_perto != noone && distance_to_object(_arma_perto) < _distancia_interacao) {
         weapon_pickup();
-        exit;
+        exit; // Interagiu, não faz mais nada neste frame.
     }
 
-    // 2. Cofre
+    // --- Prioridade 2: Tenta Interagir com o Cofre ---
     var _cofre_perto = instance_nearest(x, y, Obj_Cofre);
     if (_cofre_perto != noone && distance_to_object(_cofre_perto) < _distancia_interacao) {
         if (!instance_exists(Obj_Cofre_UI)) {
@@ -51,7 +56,7 @@ if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && !global
         exit;
     }
 
-    // 3. Chave
+    // --- Prioridade 3: Tenta Interagir com uma Chave ---
     var _chave_perto = instance_nearest(x, y, Obj_Chave);
     if (_chave_perto != noone && distance_to_object(_chave_perto) < _distancia_interacao) {
         var _dialogo_para_mostrar = _chave_perto.dialogo_ao_apanhar;
@@ -62,7 +67,7 @@ if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && !global
         exit;
     }
 
-    // 4. Porta
+    // --- Prioridade 4: Tenta Interagir com uma Porta ---
     var _porta_perto = instance_nearest(x, y, Obj_Porta_Trancavel);
     if (_porta_perto != noone && distance_to_object(_porta_perto) < _distancia_interacao) {
         if (_porta_perto.trancada) {
@@ -88,23 +93,20 @@ if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && !global
         exit;
     }
 
-    // 5. NPCs
+    // --- Prioridade 5: Tenta Falar com um NPC ---
     var _npc_perto = instance_nearest(x, y, Obj_ncp_parent);
     if (_npc_perto != noone && distance_to_object(_npc_perto) < _distancia_interacao) {
         var _chave_dialogo;
-
         if (variable_instance_exists(_npc_perto, "estado_conversa")) {
             _chave_dialogo = _npc_perto.nome + "_" + string(_npc_perto.estado_conversa);
-            if (_npc_perto.estado_conversa < 2) {
+            if (_npc_perto.estado_conversa < 2) { // Limite do estado
                 _npc_perto.estado_conversa += 1;
             }
         } else {
             _chave_dialogo = _npc_perto.nome;
         }
-
         var _dialogo = instance_create_layer(x, y, "dialogo", Obj_dialogo);
         _dialogo.npc_nome = _chave_dialogo;
-
         if (_npc_perto.object_index == Obj_nap_pai_respirando) {
             global.falou_com_pai = true;
         }

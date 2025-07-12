@@ -87,7 +87,6 @@
     {"name":"inst_2D795F62","path":"rooms/Room_casa_Yuki/Room_casa_Yuki.yy",},
     {"name":"inst_2A2A65","path":"rooms/Room_casa_Yuki/Room_casa_Yuki.yy",},
     {"name":"inst_7B8140D5","path":"rooms/Room_casa_Yuki/Room_casa_Yuki.yy",},
-    {"name":"inst_72F60FA7","path":"rooms/Room_casa_Yuki/Room_casa_Yuki.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -203,7 +202,6 @@
         {"$GMRInstance":"v2","%Name":"inst_2D795F62","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2D795F62","objectId":{"name":"Obj_pistol","path":"objects/Obj_pistol/Obj_pistol.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":139.0,},
         {"$GMRInstance":"v2","%Name":"inst_2A2A65","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2A2A65","objectId":{"name":"Obj_sniper","path":"objects/Obj_sniper/Obj_sniper.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":133.0,"y":159.0,},
         {"$GMRInstance":"v2","%Name":"inst_7B8140D5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7B8140D5","objectId":{"name":"Obj_tolpshon","path":"objects/Obj_tolpshon/Obj_tolpshon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":133.0,"y":122.0,},
-        {"$GMRInstance":"v2","%Name":"inst_72F60FA7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_72F60FA7","objectId":{"name":"Obj_Inventario_UI","path":"objects/Obj_Inventario_UI/Obj_Inventario_UI.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-100.0,"y":66.0,},
       ],"layers":[],"name":"npc","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Til_tapede","depth":1400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Til_tapede","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":32,"SerialiseWidth":29,"TileCompressedData":[
           -7,-2147483648,-4,0,4,7,0,0,10,-20,-2147483648,-8,0,1,16,-20,-2147483648,-9,0,-20,-2147483648,-9,0,-20,

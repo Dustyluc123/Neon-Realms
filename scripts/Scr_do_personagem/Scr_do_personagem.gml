@@ -83,12 +83,12 @@ switch dir {
 }
 }
 
-	
-//Arma
-
-if (instance_exists(my_weapon))
+ // --- LÓGICA DA ARMA (Refatorada e Corrigida) ---
+    
+    // Só executa a lógica da arma se o jogador tiver uma arma equipada
+    if (instance_exists(my_weapon))
     {
-        // O with(my_weapon) é usado apenas para posicionar a arma visualmente
+        // Posiciona a arma visualmente
         with(my_weapon) {
             weapon_dir = point_direction(other.x, other.y, mouse_x, mouse_y);
             image_angle = weapon_dir;
@@ -106,18 +106,15 @@ if (instance_exists(my_weapon))
         }
         
         if (mb) {
-            atirar(); // Assume que atirar() é uma função global ou um script
+            atirar(); // Chama a função global
         }
         
         // Lógica de Largar a Arma (tecla 'F')
         var key_drop = keyboard_check_pressed(ord("F"));
-        if (key_drop && weapon > 0) {
-            weapon_drop(); // Assume que weapon_drop() é uma função global ou um script
+        if (key_drop) {
+            weapon_drop(); // Chama a função global
         }
     }
-    
-
-
 ////dash
 if mouse_check_button_pressed(mb_right){
     alarm[0] = 8

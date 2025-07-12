@@ -1,24 +1,118 @@
-// --- CÓDIGO CORRIGIDO para a sua função no script Scr_mudar_arma ---
+// Script: Scr_mudar_arma
+// Contém todas as funções globais para gerir o inventário e as ações das armas.
 
-function Scr_mudar_arma(player_id, weapon_index) {
+/// @function       weapon_update_equipped()
+/// @description    Atualiza qual é a arma ativa do jogador com base no slot selecionado.
+function weapon_update_equipped() {
+    
+    // Esconde todas as armas primeiro para evitar que duas apareçam ao mesmo tempo
+    if (instance_exists(global.inventario.arma_primaria)) {
+        global.inventario.arma_primaria.visible = false;
+    }
+    if (instance_exists(global.inventario.arma_secundaria)) {
+        global.inventario.arma_secundaria.visible = false;
+    }
 
-    // Guarda o ID numérico da arma atual
-    player_id.weapon = weapon_index;
+    // Define qual é a arma ativa com base no slot escolhido
+    if (global.inventario.arma_equipada_slot == 1) {
+        my_weapon = global.inventario.arma_primaria;
+    } else {
+        my_weapon = global.inventario.arma_secundaria;
+    }
     
-    // --- Transferência de Atributos ---
-    // Lê a "ficha técnica" da arma no seu "banco de dados" (o ds_map do Obj_armas)
-    // e copia cada atributo para uma variável dentro do JOGADOR.
+    // Se a arma equipada realmente existe, mostra-a e atualiza os atributos do jogador
+    if (instance_exists(my_weapon)) {
+        my_weapon.visible = true;
+        
+        // Lê a "ficha técnica" da arma e copia os atributos para o jogador
+        var _arma_id = my_weapon.weapon_id; // Cada objeto de arma precisa ter esta variável!
+        var _arma_data = Obj_armas.armas[_arma_id];
+        
+        // Copia os atributos do "banco de dados" para o jogador
+        proj = _arma_data[? "proj"];
+        proj_spd = _arma_data[? "proj_spd"];
+        proj_damage = _arma_data[? "proj_damage"];
+        proj_delay = _arma_data[? "proj_delay"];
+        drop = _arma_data[? "drop"];
+        
+        // <<< A CORREÇÃO CRUCIAL QUE RESOLVE O SEU ERRO >>>
+        // Agora, o jogador sabe se a sua arma é automática.
+        automatic = _arma_data[? "automatic"];
+    }
+}
+
+
+/// @function       weapon_pickup()
+/// @description    Lógica inteligente para apanhar uma nova arma do chão e colocá-la no inventário.
+function weapon_pickup() {
+    var _arma_no_chao = instance_nearest(x, y, Obj_weapon_drop);
+    if (_arma_no_chao != noone && distance_to_object(_arma_no_chao) < 48) {
+        
+        var _nova_arma_tipo = _arma_no_chao.weapon;
+        var _nova_arma_inst = noone;
+
+        // Se o slot primário está vazio...
+        if (global.inventario.arma_primaria == noone) {
+            _nova_arma_inst = instance_create_layer(x, y, "Instances", _nova_arma_tipo);
+            global.inventario.arma_primaria = _nova_arma_inst;
+            global.inventario.arma_equipada_slot = 1;
+        }
+        // Se o slot secundário está vazio...
+        else if (global.inventario.arma_secundaria == noone) {
+            _nova_arma_inst = instance_create_layer(x, y, "Instances", _nova_arma_tipo);
+            global.inventario.arma_secundaria = _nova_arma_inst;
+            global.inventario.arma_equipada_slot = 2;
+        }
+        // Se ambos os slots estão cheios...
+        else {
+            array_push(global.inventario.armas_na_mochila, _nova_arma_tipo);
+        }
+        
+        // Se uma nova arma foi equipada, atualiza o estado
+        if (instance_exists(_nova_arma_inst)) {
+            weapon_update_equipped();
+        }
+
+        instance_destroy(_arma_no_chao);
+    }
+}
+
+
+/// @function       atirar()
+/// @description    Cria um projétil com base na arma equipada.
+function atirar() {
+    if (!can_shoot || !instance_exists(my_weapon)) { return; }
     
-    var _arma_data = Obj_armas.armas[weapon_index];
+    var _p = instance_create_layer(my_weapon.weapon_x, my_weapon.weapon_y, "projeteis", proj);
+    _p.image_angle = my_weapon.image_angle;
+    _p.speed = proj_spd;
+    _p.direction = my_weapon.image_angle;
+    _p.damage = proj_damage;
     
-    player_id.sprite_index = _arma_data[? "sprite"];
-    player_id.proj = _arma_data[? "proj"];
-    player_id.proj_spd = _arma_data[? "proj_spd"];
-    player_id.proj_damage = _arma_data[? "proj_damage"];
-    player_id.proj_delay = _arma_data[? "proj_delay"];
-    player_id.drop = _arma_data[? "drop"];
+    can_shoot = false;
+    alarm[0] = proj_delay;
+}
+
+
+/// @function       weapon_drop()
+/// @description    Larga a arma atualmente equipada no chão.
+function weapon_drop() {
+    if (!instance_exists(my_weapon)) { return; }
     
-    // --- A CORREÇÃO CRUCIAL ESTÁ AQUI ---
-    // Copia a propriedade "automatic" do ds_map para uma variável no jogador.
-    player_id.automatic = _arma_data[? "automatic"];
+    var _inst = instance_create_layer(x, y, "Instances", drop);
+    _inst.image_angle = my_weapon.image_angle;
+    _inst.direction = my_weapon.image_angle;
+    _inst.speed = 3;
+    
+    // Remove a arma do slot correto
+    if (global.inventario.arma_equipada_slot == 1) {
+        instance_destroy(global.inventario.arma_primaria);
+        global.inventario.arma_primaria = noone;
+    } else {
+        instance_destroy(global.inventario.arma_secundaria);
+        global.inventario.arma_secundaria = noone;
+    }
+    
+    // Tenta equipar a outra arma se existir, senão fica desarmado
+    weapon_update_equipped();
 }
