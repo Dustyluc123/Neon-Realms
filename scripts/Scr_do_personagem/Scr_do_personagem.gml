@@ -105,10 +105,6 @@ if(mb){
    }	
 if (key_drop and weapon>0){
 	weapon_drop()
-}else if(key_drop and weapon ==0){
-	if distance_to_object(Obj_weapon_drop)<=20{
-weapon_pickup()
-}
 }
 }
 
