@@ -86,27 +86,36 @@ switch dir {
 	
 //Arma
 
-with(my_weapon){
-	
-	var mb;
-	var key_drop = keyboard_check_pressed(ord("F"))
-	if(automatic){
-		mb = mouse_check_button(mb_left)
-	}else{
-	    mb = mouse_check_button_pressed(mb_left)
-	}
-	 
-	
-weapon_dir = point_direction(x,y,mouse_x,mouse_y);
+if (instance_exists(my_weapon))
+    {
+        // O with(my_weapon) é usado apenas para posicionar a arma visualmente
+        with(my_weapon) {
+            weapon_dir = point_direction(other.x, other.y, mouse_x, mouse_y);
+            image_angle = weapon_dir;
+            x = other.x + lengthdir_x(6, weapon_dir);
+            y = other.y + lengthdir_y(6, weapon_dir);
+        }
 
-if(mb){
-	
-	atirar()
-   }	
-if (key_drop and weapon>0){
-	weapon_drop()
-}
-}
+        // Lógica de Tiro
+        var mb;
+        // A verificação agora lê a variável 'automatic' DO JOGADOR!
+        if (automatic) {
+            mb = mouse_check_button(mb_left);
+        } else {
+            mb = mouse_check_button_pressed(mb_left);
+        }
+        
+        if (mb) {
+            atirar(); // Assume que atirar() é uma função global ou um script
+        }
+        
+        // Lógica de Largar a Arma (tecla 'F')
+        var key_drop = keyboard_check_pressed(ord("F"));
+        if (key_drop && weapon > 0) {
+            weapon_drop(); // Assume que weapon_drop() é uma função global ou um script
+        }
+    }
+    
 
 
 ////dash
