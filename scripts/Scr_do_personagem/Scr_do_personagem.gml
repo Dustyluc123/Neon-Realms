@@ -85,9 +85,10 @@ switch dir {
 
 
 //Arma
-if (instance_exists(my_weapon))
+// Só executa a lógica se o jogador tiver uma arma equipada
+    if (instance_exists(my_weapon))
     {
-        // Posiciona a arma visualmente
+        // Posiciona a arma visualmente e define a sua direção
         with(my_weapon) {
             weapon_dir = point_direction(other.x, other.y, mouse_x, mouse_y);
             image_angle = weapon_dir;
@@ -128,8 +129,6 @@ if (instance_exists(my_weapon))
         // Equipa "mãos vazias"
         Scr_mudar_arma(self, 0);
     }
-    
-////dash
 if mouse_check_button_pressed(mb_right){
     alarm[0] = 8
 

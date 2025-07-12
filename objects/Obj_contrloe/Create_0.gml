@@ -18,9 +18,3 @@ global.proximo_player_y = noone;
 global.falou_com_pai = false;
 global.dialogo = false;
 global.em_cutscene = false;
-
-// Exemplo: O jogador começa com uma pistola já equipada no slot primário.
-// Você pode remover ou alterar esta parte se o jogador começar desarmado.
-var _arma_inicial = instance_create_layer(0, 0, "Instances", Obj_pistol);
-_arma_inicial.visible = false; // A arma fica invisível até ser usada
-global.inventario.arma_primaria = _arma_inicial;
