@@ -1,5 +1,5 @@
-// Script: Scr_mudar_arma
-// Contém todas as funções globais para gerir o inventário e as ações das armas.
+// --- CÓDIGO FINAL E COMPLETO para o script Scr_mudar_arma ---
+// Este script agora contém todas as funções globais para gerir as armas.
 
 /// @function       weapon_update_equipped()
 /// @description    Atualiza qual é a arma ativa do jogador com base no slot selecionado.
@@ -25,7 +25,7 @@ function weapon_update_equipped() {
         my_weapon.visible = true;
         
         // Lê a "ficha técnica" da arma e copia os atributos para o jogador
-        var _arma_id = my_weapon.weapon_id; // Cada objeto de arma precisa ter esta variável!
+        var _arma_id = my_weapon.weapon_id;
         var _arma_data = Obj_armas.armas[_arma_id];
         
         // Copia os atributos do "banco de dados" para o jogador

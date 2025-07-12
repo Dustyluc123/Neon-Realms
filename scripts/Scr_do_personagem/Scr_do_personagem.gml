@@ -83,38 +83,33 @@ switch dir {
 }
 }
 
- // --- LÓGICA DA ARMA (Refatorada e Corrigida) ---
-    
-    // Só executa a lógica da arma se o jogador tiver uma arma equipada
-    if (instance_exists(my_weapon))
-    {
-        // Posiciona a arma visualmente
-        with(my_weapon) {
-            weapon_dir = point_direction(other.x, other.y, mouse_x, mouse_y);
-            image_angle = weapon_dir;
-            x = other.x + lengthdir_x(6, weapon_dir);
-            y = other.y + lengthdir_y(6, weapon_dir);
-        }
+ // --- CÓDIGO CORRIGIDO para a lógica da Arma em Scr_personagem_andando ---
 
-        // Lógica de Tiro
-        var mb;
-        // A verificação agora lê a variável 'automatic' DO JOGADOR!
-        if (automatic) {
-            mb = mouse_check_button(mb_left);
-        } else {
-            mb = mouse_check_button_pressed(mb_left);
-        }
-        
-        if (mb) {
-            atirar(); // Chama a função global
-        }
-        
-        // Lógica de Largar a Arma (tecla 'F')
-        var key_drop = keyboard_check_pressed(ord("F"));
-        if (key_drop) {
-            weapon_drop(); // Chama a função global
-        }
+//Arma
+with(my_weapon) {
+    
+    var mb;
+    var key_drop = keyboard_check_pressed(ord("F"));
+    
+    // --- A CORREÇÃO CRUCIAL ESTÁ AQUI ---
+    // A arma agora pergunta ao seu "dono" (o jogador) se ela é automática.
+    // "other" dentro de um 'with' refere-se à instância que chamou o 'with'.
+    if (other.automatic) {
+        mb = mouse_check_button(mb_left);
+    } else {
+        mb = mouse_check_button_pressed(mb_left);
     }
+    
+    // O resto do seu código da arma continua igual...
+    weapon_dir = point_direction(other.x, other.y, mouse_x, mouse_y);
+
+    if (mb) {
+        atirar();
+    }
+    if (key_drop and other.weapon > 0) {
+        weapon_drop();
+    }
+}
 ////dash
 if mouse_check_button_pressed(mb_right){
     alarm[0] = 8

@@ -34,7 +34,7 @@ if (global.dialogo == false && global.em_cutscene == false)
 }
 
 // --- Lógica de Interação Unificada (tecla 'E') ---
-var _distancia_interacao = 48;
+var _distancia_interacao = 10;
 
 // Só permite interagir se não estiver em diálogo ou cutscene.
 if (keyboard_check_pressed(ord("E")) && !instance_exists(Obj_dialogo) && !global.em_cutscene) 

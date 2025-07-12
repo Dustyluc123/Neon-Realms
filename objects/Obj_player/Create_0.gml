@@ -37,6 +37,15 @@ hit_alpha = 0
 
 hit_color = c_white
 
+// Variáveis relacionadas à arma atual
+automatic = false;
+proj = -1;
+proj_spd = 0;
+proj_damage = 0;
+proj_delay = 0;
+drop = -1;
+
+
 // No final do evento Create de Obj_player
 
 // Cria uma instância do nosso objeto de sombra
