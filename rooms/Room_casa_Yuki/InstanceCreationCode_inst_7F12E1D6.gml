@@ -14,8 +14,8 @@ acao_ao_abrir = "mudar_de_sala";
 sala_de_destino = Room_vila;
 
 // CORREÇÃO: Usamos '=' para atribuir valores, e não ':'
-target_x = 2340;
-target_y = 180;
+target_x = 4086;
+target_y = 332;
 
 // No Código de Criação da Instância da porta de saída
 

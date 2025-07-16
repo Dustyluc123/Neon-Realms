@@ -106,9 +106,8 @@ function atirar() {
 function weapon_drop() {
     if (!instance_exists(my_weapon)) { return; }
     
-var _inst = instance_create_layer(x, y, "Instances", Obj_weapon_drop);
-_inst.weapon = weapon;
-
+    var _inst = instance_create_layer(x, y, "Instances", drop);
+    _inst.weapon = weapon; // "Etiqueta" o drop com o ID da arma
     
     _inst.image_angle = my_weapon.image_angle;
     _inst.direction = my_weapon.image_angle;

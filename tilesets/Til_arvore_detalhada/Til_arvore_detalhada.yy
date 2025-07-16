@@ -1,24 +1,27 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"til_casa",
+  "%Name":"Til_arvore_detalhada",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"til_casa",
-  "out_columns":10,
+  "name":"Til_arvore_detalhada",
+  "out_columns":8,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Conjuntos de tiles",
-    "path":"folders/Conjuntos de tiles.yy",
+    "name":"naturasa",
+    "path":"folders/Conjuntos de tiles/naturasa.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":null,
-  "spriteNoExport":true,
+  "spriteId":{
+    "name":"Spr_arvore",
+    "path":"sprites/Spr_arvore/Spr_arvore.yy",
+  },
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",
@@ -31,5 +34,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":100,
+  "tile_count":70,
 }
