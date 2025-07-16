@@ -85,8 +85,7 @@ switch dir {
 
 
 //Arma
-// Só executa a lógica se o jogador tiver uma arma equipada
-    if (instance_exists(my_weapon))
+if (instance_exists(my_weapon))
     {
         // Posiciona a arma visualmente e define a sua direção
         with(my_weapon) {
@@ -129,6 +128,7 @@ switch dir {
         // Equipa "mãos vazias"
         Scr_mudar_arma(self, 0);
     }
+	//Daash
 if mouse_check_button_pressed(mb_right){
     alarm[0] = 8
 
