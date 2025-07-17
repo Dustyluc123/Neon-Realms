@@ -1,3 +1,8 @@
-/// @description Inicializa a variável 'weapon' para garantir que ela sempre exista.
+/// @description Inicializa as variáveis da arma no chão.
 
-weapon = -1; // Garante que a variável 'weapon' sempre existirá em qualquer arma no chão.
+// Garante que a variável 'weapon' sempre existirá.
+weapon = -1; 
+
+// <<< A LINHA QUE FALTAVA >>>
+// Garante que a variável 'state' sempre existirá e define o estado inicial.
+state = "on_ground";
