@@ -6,7 +6,6 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_7D6C573C_1","path":"rooms/Room_vila/Room_vila.yy",},
     {"name":"inst_64D9AB47_1","path":"rooms/Room_vila/Room_vila.yy",},
     {"name":"inst_7DB6B265_1","path":"rooms/Room_vila/Room_vila.yy",},
     {"name":"inst_62D1C740_1","path":"rooms/Room_vila/Room_vila.yy",},
@@ -56,7 +55,6 @@
         {"$GMRInstance":"v2","%Name":"inst_7DB6B265_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7DB6B265_1","objectId":{"name":"Obj_proj","path":"objects/Obj_proj/Obj_proj.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":0.9375,"x":-133.0,"y":87.0,},
       ],"layers":[],"name":"projeteis","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Weapons","depth":400,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v2","%Name":"inst_7D6C573C_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7D6C573C_1","objectId":{"name":"Obj_armas","path":"objects/Obj_armas/Obj_armas.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-128.0,"y":51.0,},
         {"$GMRInstance":"v2","%Name":"inst_64D9AB47_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_64D9AB47_1","objectId":{"name":"Obj_weapon_drop","path":"objects/Obj_weapon_drop/Obj_weapon_drop.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-162.0,"y":31.0,},
         {"$GMRInstance":"v2","%Name":"inst_3C605DD5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3C605DD5","objectId":{"name":"Obj_ir_lilith","path":"objects/Obj_ir_lilith/Obj_ir_lilith.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4256.0,"y":64.0,},
       ],"layers":[],"name":"Weapons","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

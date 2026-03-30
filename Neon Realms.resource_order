@@ -36,7 +36,6 @@
     {"name":"Scripts","order":9,"path":"folders/Scripts.yy",},
     {"name":"Sequências","order":10,"path":"folders/Sequências.yy",},
     {"name":"Shaders","order":11,"path":"folders/Shaders.yy",},
-    {"name":"Sons","order":11,"path":"folders/Sprites/Sons.yy",},
     {"name":"Sprites","order":13,"path":"folders/Sprites.yy",},
     {"name":"Armas","order":1,"path":"folders/Sprites/Armas.yy",},
     {"name":"Projetio","order":6,"path":"folders/Sprites/Armas/Projetio.yy",},
@@ -61,6 +60,7 @@
     {"name":"Rabisco","order":22,"path":"folders/Sprites/retrado/Rabisco.yy",},
     {"name":"tyler","order":19,"path":"folders/Sprites/retrado/tyler.yy",},
     {"name":"yuki","order":18,"path":"folders/Sprites/retrado/yuki.yy",},
+    {"name":"Sons","order":11,"path":"folders/Sprites/Sons.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"fonte_pixe","order":1,"path":"fonts/fonte_pixe/fonte_pixe.yy",},
