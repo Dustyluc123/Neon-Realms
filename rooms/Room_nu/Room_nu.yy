@@ -51,8 +51,8 @@
   ],
   "name":"Room_nu",
   "parent":{
-    "name":"Cenas",
-    "path":"folders/Cenas.yy",
+    "name":"menu",
+    "path":"folders/Cenas/menu.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

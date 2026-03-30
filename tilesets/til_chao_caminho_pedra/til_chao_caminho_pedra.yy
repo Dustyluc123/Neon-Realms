@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"til_chao_caminho_pedra",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"til_chao_caminho_pedra",
+  "out_columns":16,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"chao",
+    "path":"folders/Conjuntos de tiles/chao.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"Spr_chao_caminho_pedra",
+    "path":"sprites/Spr_chao_caminho_pedra/Spr_chao_caminho_pedra.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":4,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":4,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":256,
+}

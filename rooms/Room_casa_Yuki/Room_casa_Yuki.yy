@@ -113,7 +113,7 @@
           -9,-2147483648,2,1073741827,1879048194,-6,-2147483648,2,1073741827,1879048194,-9,-2147483648,1,1073741827,
           -28,-2147483648,1,1073741826,-28,-2147483648,1,1073741827,-28,-2147483648,1,1073741826,-28,-2147483648,
           1,1073741827,-9,-2147483648,19,1073741826,1879048195,805306371,805306370,-2147483648,-2147483648,805306371,
-          805306370,1073741826,805306371,805306370,805306371,805306370,805306371,805306370,0,0,805306371,805306370,
+          805306370,1073741826,805306371,805306370,805306371,805306370,805306371,805306370,0,0,805306371,805306371,
           -10,-2147483648,2,1073741827,1879048194,-6,-2147483648,1,1073741827,-15,-2147483648,7,805306370,805306371,
           805306370,805306371,805306370,0,1879048195,-6,-2147483648,1,1073741826,-20,-2147483648,2,0,1879048194,
           -6,-2147483648,1,1073741827,-15,-2147483648,-6,0,1,1879048195,-6,-2147483648,1,1073741826,-21,-2147483648,
@@ -196,7 +196,7 @@
         {"$GMRInstance":"v2","%Name":"inst_61F12CFB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_61F12CFB","objectId":{"name":"Obj_criar_ligth","path":"objects/Obj_criar_ligth/Obj_criar_ligth.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":131.0,"y":40.0,},
       ],"layers":[],"name":"luz","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"npc","depth":1300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v2","%Name":"inst_3FB22856","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3FB22856","objectId":{"name":"Obj_nap_pai_respirando","path":"objects/Obj_nap_pai_respirando/Obj_nap_pai_respirando.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-359.7685,"scaleX":1.0,"scaleY":1.0,"x":58.076614,"y":183.07661,},
+        {"$GMRInstance":"v2","%Name":"inst_3FB22856","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3FB22856","objectId":{"name":"Obj_nap_pai_respirando","path":"objects/Obj_nap_pai_respirando/Obj_nap_pai_respirando.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-359.7685,"scaleX":1.0,"scaleY":1.0,"x":119.0,"y":218.07661,},
         {"$GMRInstance":"v2","%Name":"inst_7F6B124A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7F6B124A","objectId":{"name":"Obj_Cama","path":"objects/Obj_Cama/Obj_Cama.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.99999994,"scaleY":1.0,"x":141.0,"y":56.4375,},
         {"$GMRInstance":"v2","%Name":"inst_24A5C7AC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24A5C7AC","objectId":{"name":"Obj_poster","path":"objects/Obj_poster/Obj_poster.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":191.0,"y":37.0,},
         {"$GMRInstance":"v2","%Name":"inst_2D795F62","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2D795F62","objectId":{"name":"Obj_pistol","path":"objects/Obj_pistol/Obj_pistol.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":139.0,},
@@ -429,8 +429,8 @@
   ],
   "name":"Room_casa_Yuki",
   "parent":{
-    "name":"Cenas",
-    "path":"folders/Cenas.yy",
+    "name":"Casas_vila",
+    "path":"folders/Cenas/Casas_vila.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

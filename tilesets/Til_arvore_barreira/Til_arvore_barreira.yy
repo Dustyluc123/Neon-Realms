@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"Til_arvore_barreira",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"Til_arvore_barreira",
+  "out_columns":47,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"naturasa",
+    "path":"folders/Conjuntos de tiles/naturasa.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"Sprite208",
+    "path":"sprites/Sprite208/Sprite208.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":2,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":2,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":2200,
+}
