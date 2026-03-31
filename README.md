@@ -5,7 +5,7 @@
 
 <img src="https://img.shields.io/badge/Status-Project_Evolution-purple?style=for-the-badge" /> <img src="https://img.shields.io/badge/Made_with-GameMaker-FF5F00?style=for-the-badge&logo=gamemaker&logoColor=white" /> <img src="https://img.shields.io/badge/Dev-Solo_Project-0078D4?style=for-the-badge" />
 
-![Neon Realms Banner](babyyuki.jpeg/>
+!<img src="./babyyuki.jpeg" alt="Yuki Bebé" width="300px" />
 )
 
 </div>
