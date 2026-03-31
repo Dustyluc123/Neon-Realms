@@ -16,7 +16,7 @@
 
 No ano de **2052**, o mundo é um reflexo da **Blends Corporation**. Sob o lema *"Moldando o Mundo, Moldando Você"*, a corporação controla a sociedade através de uma IA onipresente.
 
-O conflito explode com os **Impuros**: seres de sangue roxo e habilidades sobre-humanas que buscam vingança. Você controla **Yuki**, um jovem preso entre o dever e o sangue, enfrentando seu próprio irmão, **Dusty**, o CEO da Blends.
+O conflito explode com os **Impuros**: seres de sangue roxo e habilidades sobre-humanas que buscam vingança. Você controla **Yuki**, um jovem preso entre o dever e o sangue, enfrentando varios problemas em sua jornada.
 
 ---
 
