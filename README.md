@@ -1,52 +1,73 @@
-🌌 Neon Realms: Onde as escolhas moldam o destino
-Neon Realms é um RPG de ação top-down com estética Cyber-Pixel, onde a narrativa e a mecânica de escolhas são o núcleo da experiência. Desenvolvido originalmente durante meu ensino médio, este projeto representa o marco inicial da minha jornada na Engenharia de Software, unindo lógica complexa e storytelling imersivo.
+<div align="center">
 
-📜 A História (The Lore)
-No ano de 2052, o mundo é moldado pela Blends Corporation. Sob o lema "Moldando o Mundo, Moldando Você", a corporação controla a sociedade através de uma IA onipresente e manipulação social.
+# 🌌 Neon Realms
+**Onde as escolhas moldam o destino e o neon esconde a verdade.**
 
-O conflito central reside na existência dos Impuros: seres de sangue roxo e habilidades sobre-humanas que, após séculos de exploração humana, buscam vingança. Você assume o papel de Yuki, um jovem que descobre estar no centro de uma guerra familiar e corporativa, tendo que enfrentar enormes problemas durante sua jornada .
+<img src="https://img.shields.io/badge/Status-Project_Evolution-purple?style=for-the-badge" /> <img src="https://img.shields.io/badge/Made_with-GameMaker-FF5F00?style=for-the-badge&logo=gamemaker&logoColor=white" /> <img src="https://img.shields.io/badge/Dev-Solo_Project-0078D4?style=for-the-badge" />
 
-🛠️ Destaques Técnicos (Technical Features)
-Como um projeto de Solo Developer, o Neon Realms foi construído focando em modularidade e sistemas dinâmicos dentro da linguagem GML (GameMaker Language):
+![Neon Realms Banner](https://img.shields.io/badge/BANNER_DO_JOGO-Coloque_uma_imagem_aqui-blue?style=for-the-placeholder)
 
-Sistema de Diálogos Não-Lineares: Implementação de árvores de decisão onde as respostas do jogador alteram o estado do mundo e a relação com NPCs como Lilith e Tyler.
+</div>
 
-Engine de Iluminação Dinâmica: Uso de superfícies e renderers customizados (Obj_light_render) para criar a atmosfera neon vibrante e sombria.
+---
 
-Inteligência Artificial de Combate: Inimigos com máquinas de estado (Obj_inimigo e Obj_boss_ataque_1) que reagem à posição e ações do player.
+## 📜 A História (The Lore)
 
-Arquitetura de Câmera e Viewports: Sistema de interpolação para garantir uma movimentação suave da câmera seguindo o herói Yuki.
+No ano de **2052**, o mundo é um reflexo da **Blends Corporation**. Sob o lema *"Moldando o Mundo, Moldando Você"*, a corporação controla a sociedade através de uma IA onipresente.
 
-Lógica de Inventário e Itens: Scripts de suporte para coleta de armas, documentos de lore e interação com o cenário.
+O conflito explode com os **Impuros**: seres de sangue roxo e habilidades sobre-humanas que buscam vingança. Você controla **Yuki**, um jovem preso entre o dever e o sangue, enfrentando seu próprio irmão, **Dusty**, o CEO da Blends.
 
-🚀 Evolução do Desenvolvedor
-Este repositório é mantido público como um registro de evolução técnica.
+---
 
-O Ontem: Reflete o aprendizado autodidata de lógica de programação, manipulação de assets e gerenciamento de projetos em larga escala (para um estudante). Os commits mostram a descoberta de padrões e a resolução de bugs complexos de colisão e física 2D.
+## 🛠️ Destaques Técnicos (Technical Features)
 
-O Hoje: Serve como fundação para meus estudos atuais na FIAP, onde agora aplico conceitos de IA Generativa (como no projeto Elara) e sistemas escaláveis, utilizando a mesma persistência demonstrada na criação deste universo do zero.
+Como um projeto de **Solo Developer**, utilizei a **GML (GameMaker Language)** para construir sistemas modulares:
 
-🎮 Como Rodar (Apenas Demonstração)
-Este projeto foi construído para ser executado no ambiente GameMaker.
+* **💬 Diálogos Dinâmicos:** Árvores de decisão onde suas respostas alteram o destino de NPCs como Lilith e Tyler.
+* **💡 Engine de Luz:** Sistema customizado de iluminação dinâmica para criar a atmosfera Cyber-Pixel.
+* **🤖 IA de Combate:** Inimigos com máquinas de estado complexas que reagem às ações do jogador.
+* **🎥 Smooth Camera:** Sistema de interpolação para movimentação cinematográfica da câmera.
 
-Clone o repositório.
+---
 
-Abra o arquivo Neon Realms.yyp no GameMaker Suite.
+## 🚀 Minha Evolução
 
-Pressione F5 para rodar o ambiente de teste.
+Este repositório é um **marco temporal**. 
+- **O Ontem:** Representa meu aprendizado autodidata no ensino médio, onde desbravei lógica, física 2D e design de jogos sozinho.
+- **O Hoje:** Essa base de persistência me levou à **FIAP**, onde hoje desenvolvo sistemas escaláveis e IA (como o projeto **Elara**). Os commits antigos são o registro real de onde tudo começou.
 
-📄 Licença e Direitos Autorais (Legal Info)
-Copyright (c) 2026 Lucas Barreto.
+---
 
-Todos os direitos reservados. Este software e todos os ativos (incluindo arte, música, roteiro e código) contidos neste repositório são de propriedade exclusiva de Lucas Barreto.
+## 🎮 Como Rodar
 
-Uso permitido: A visualização e estudo do código para fins de avaliação de portfólio.
+1. Clone o repositório.
+2. Abra o arquivo `Neon Realms.yyp` no **GameMaker Suite**.
+3. Pressione `F5` para iniciar o ambiente de teste.
 
-Uso proibido: A reprodução, redistribuição, modificação para fins comerciais ou publicação em qualquer plataforma de jogos sem a autorização prévia por escrito do autor.
+---
 
-📫 Contato
-LinkedIn: https://www.linkedin.com/in/lucasbarretosantana-67aa932b6/
+## 📄 Licença e Direitos Autorais
 
-Email: lucasbrsantana@gmail.com
+<div align="center">
+  <strong>Copyright (c) 2026 Lucas Barreto. Todos os direitos reservados.</strong>
+</div>
 
-Developed with 💜 and logic.
+Este projeto é para fins de **exibição de portfólio técnico**. 
+* **Permitido:** Estudo do código e avaliação por recrutadores.
+* **Proibido:** Reprodução, redistribuição ou uso comercial de qualquer asset (arte, música, código ou roteiro) sem autorização prévia.
+
+---
+
+<div align="center">
+
+### 📫 Entre em contato:
+<a href="https://www.linkedin.com/in/lucasbarretosantana-67aa932b6/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="mailto:lucasbrsantana@gmail.com">
+  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+
+*Developed with 💜 and Logic*
+
+</div>
